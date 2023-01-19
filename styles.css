@@ -1,0 +1,133 @@
+body {
+    /* google fonts HERE */
+    /* something about min-max width?? */
+    max-width: 1200px;
+    /* is this required lol */
+    /* min-width: 900px; */
+    margin: auto;
+}
+
+#banner {
+    margin: auto;
+    /* why is this working^ */
+
+    width: 1100px;
+    height: 250px;
+
+    /* TEST ONLY */
+    background-color: aqua; 
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+   flex: 1;
+   box-sizing: border-box;
+   background-color: pink;
+   border-radius: 35px;
+   box-shadow: inset 0px -1px 10px 6px rgba(69, 116, 189, 0.3);
+   padding: 35px;
+   margin: 35px;
+
+    /* flippy nonsense */
+    position: relative;
+    perspective: 1000px;
+}
+
+section:hover .back{
+    transform: rotateX(180deg);
+ }
+ 
+ section:hover .front{
+    transform: rotateX(0);
+ }
+
+ .back, .front {
+   box-sizing: border-box;
+   backface-visibility: hidden;
+   position: absolute;
+   top:0;
+   left: 0;
+   width: 100%;
+   transition: transform 1s ease-in;
+}
+
+.back { 
+   /* border: 2px solid #EFBDEB;  */
+   /* background-image: url(images/llamas.jpg); */
+   /* aspect-ratio: 2 / 3; */
+   background-color: pink;
+   border-radius: 35px;
+   box-shadow: inset 0px -1px 10px 6px rgba(69, 116, 189, 0.3);
+   padding: 35px;
+   /* margin: 35px; */
+   transform: rotateX(0);
+}
+
+.front {	
+   background-color: peachpuff;
+   border-radius: 35px;
+   box-shadow: inset 0px -1px 10px 6px rgba(69, 116, 189, 0.3);
+   padding: 35px;
+   /* margin: 35px; */
+   transform: rotateX(-180deg);
+}
+
+
+/* .card {
+    aspect-ratio: 2 / 3;
+    position: relative;
+    perspective: 1000px;
+ }
+ 
+ .card:hover .back{
+    transform: rotateY(180deg);
+ }
+ 
+ .card:hover .front{
+    transform: rotateY(0);
+ }
+ 
+ 
+ .back, .front {
+     backface-visibility: hidden;
+    border-radius: 10px;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    transition: transform 1s ease-in;
+ }
+ 
+ .back { 
+    border: 2px solid #EFBDEB; 
+    background-image: url(images/llamas.jpg);
+    aspect-ratio: 2 / 3;
+    transform: rotateY(0);
+ }
+ 
+ .front {	
+    transform: rotateY(-180deg);
+ } */
+ 
+ /* .front img {
+    border: 2px solid #EFBDEB;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+} */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
