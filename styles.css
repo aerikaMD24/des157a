@@ -407,10 +407,13 @@ main ul {
    text-align: left;
 }
 
-a,
-a:hover {
+a {
    color: #2D4C89;
    text-decoration: none;
+}
+
+a:hover {
+   color: #F670B8;
 }
 
 section {
@@ -503,4 +506,8 @@ footer p,
 footer a,
 footer a:hover {
    color: white;
+}
+
+footer a:hover {
+   color: #2D4C89;
 }
