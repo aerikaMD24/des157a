@@ -1,100 +1,395 @@
 body {
    max-width: 1200px;
    min-width: 900px;
-   /* height: 100%; */
    margin: auto;
-   background: linear-gradient(180deg, #6ABDCF 0%, #A1C3CE 35.42%, #42BCC4 61.46%, #466EBC 100%);
+   background: linear-gradient(180deg, #DED8F0 0%, #AEDDF8 35.42%, #AAE5ED 61.46%, #799BE7 100%);
    background-repeat: no-repeat;
 
    /* This was what resolved an issue of mine */
    background-attachment: fixed;
+
+   color: #2D4C89;
+   font-family: 'Varela Round', sans-serif;
+   font-size: 20px;
 }
 
-.back h2 {
-   text-align: left;
-   /* border: 5px black dashed; */
-   margin: 10px 0;
+h1,
+h2 {
+   color: #F670B8;
+   font-family: 'Fredoka One', cursive;
+   text-align: center;
+}
+
+h1 {
+   padding: 35px;
+   font-size: 64px;
+}
+
+h2 {
+   font-size: 24px;
 }
 
 #banner {
    width: 1100px;
    height: 250px;
    margin: auto;
-   border-radius: 15px;
+   border-radius: 25px;
    position: relative;
-   /* TEST ONLY */
-   background-color: rgb(249, 246, 238, 10%);
-
+   background-color: #E6EDF9
 }
 
-h1 {
-   text-align: center;
-   border: 2px black dotted;
-   margin: 50px;
-}
-
-#banner h2 {
-   /* position: absolute; */
-   text-align: center;
-   border: 2px black dotted;
-   /* top: 50%; */
+#bubble1,
+#bubble2,
+#bubble3,
+#bubble4,
+#bubble5,
+#bubble6,
+#bubble7,
+#bubble8,
+#bubble9,
+#bubble10 {
+   border-radius: 50%;
+   position: absolute;
+   opacity: 25%;
+   transition: all 0.25s ease-in;
+   cursor: pointer;
 }
 
 #bubble1 {
-   /* TEST ONLY */
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   z-index: -1;
-   position: absolute;
-   background-color: azure;
-   animation: bubbling 2s ease-in infinite;
+   width: 50px;
+   height: 50px;
+   background-color: #DAABF0;
+   animation: bubbling1 2s linear reverse infinite;
 }
 
+@keyframes bubbling1 {
 
-
-@keyframes bubbling {
-
-   /* TEST ONLY */
    0% {
-      bottom: 5px;
+      bottom: 0;
       left: 80px;
    }
 
    25% {
-      bottom: 10px;
-      left: 50px;
-   }
-
-   35% {
-      bottom: 35px;
-      left: 70px;
-   }
-
-   55% {
-      bottom: 65px;
-      left: 40px;
-   }
-
-   65% {
-      bottom: 110px;
+      bottom: 50px;
       left: 60px;
    }
 
-   85% {
-      bottom: 130px;
+   50% {
+      bottom: 100px;
+      left: 100px;
+   }
+
+   75% {
+      bottom: 150px;
+      left: 50px;
+   }
+
+   100% {
+      bottom: 200px;
+      left: 30px;
+   }
+}
+
+#bubble2 {
+   width: 120px;
+   height: 120px;
+   background-color: #ABB6F0;
+   animation: bubbling2 2s linear normal infinite;
+}
+
+@keyframes bubbling2 {
+
+   0% {
+      bottom: 0;
+      left: 100px;
+   }
+
+   20% {
+      bottom: 25px;
+      left: 55px;
+   }
+
+   40% {
+      bottom: 45px;
       left: 70px;
+   }
+
+   60% {
+      bottom: 65px;
+      left: 90px;
+   }
+
+   80% {
+      bottom: 85px;
+      left: 80px;
+   }
+
+   100% {
+      bottom: 125px;
+      left: 40px;
+   }
+}
+
+#bubble3 {
+   width: 150px;
+   height: 150px;
+   background-color: #C1ABF0;
+   animation: bubbling3 3s linear reverse infinite;
+}
+
+@keyframes bubbling3 {
+
+   0% {
+      bottom: 0;
+      left: 200px;
+   }
+
+   25% {
+      bottom: 25px;
+      left: 150px;
+   }
+
+   50% {
+      bottom: 50px;
+      left: 170px;
+   }
+
+   75% {
+      bottom: 75px;
+      left: 190px;
+   }
+
+   100% {
+      bottom: 100px;
+      left: 210px;
+   }
+}
+
+#bubble4 {
+   width: 75px;
+   height: 75px;
+   background-color: #DAABF0;
+   animation: bubbling4 1s linear normal infinite;
+}
+
+@keyframes bubbling4 {
+
+   0% {
+      bottom: 0;
+      left: 180px;
+   }
+
+   50% {
+      bottom: 75px;
+      left: 400px;
    }
 
    100% {
       bottom: 150px;
-      left: 80px;
+      left: 285px;
    }
 }
 
+#bubble5 {
+   width: 100px;
+   height: 100px;
+   background-color: #C1ABF0;
+   animation: bubbling5 2s linear reverse infinite;
+}
+
+@keyframes bubbling5 {
+
+   0% {
+      bottom: 0;
+      left: 300px;
+   }
+
+   50% {
+      bottom: 60px;
+      left: 480px;
+   }
+
+   100% {
+      bottom: 125px;
+      left: 320px;
+   }
+}
+
+#bubble6 {
+   width: 125px;
+   height: 125px;
+   background-color: #ABB6F0;
+   animation: bubbling6 2s linear normal infinite;
+}
+
+@keyframes bubbling6 {
+
+   0% {
+      bottom: 0;
+      right: 400px;
+   }
+
+   25% {
+      bottom: 30px;
+      right: 450px;
+   }
+
+   50% {
+      bottom: 60px;
+      right: 480px;
+   }
+
+   75% {
+      bottom: 90px;
+      right: 400px;
+   }
+
+   100% {
+      bottom: 120px;
+      right: 340px;
+   }
+}
+
+#bubble7 {
+   width: 150px;
+   height: 150px;
+   background-color: #DAABF0;
+   animation: bubbling7 3s linear reverse infinite;
+}
+
+@keyframes bubbling7 {
+
+   0% {
+      bottom: 0;
+      right: 250px;
+   }
+
+   20% {
+      bottom: 20px;
+      right: 320px;
+   }
+
+   40% {
+      bottom: 40px;
+      right: 370px;
+   }
+
+   60% {
+      bottom: 60px;
+      right: 320px;
+   }
+
+   80% {
+      bottom: 80px;
+      right: 280px
+   }
+
+   100% {
+      bottom: 100px;
+      right: 320px;
+   }
+}
+
+#bubble8 {
+   width: 60px;
+   height: 60px;
+   background-color: #ABB6F0;
+   animation: bubbling8 1s linear normal infinite;
+}
+
+@keyframes bubbling8 {
+
+   0% {
+      bottom: 0;
+      right: 280px;
+   }
+
+   50% {
+      bottom: 75px;
+      right: 180px;
+   }
+
+   100% {
+      bottom: 150px;
+      right: 230px;
+   }
+}
+
+#bubble9 {
+   width: 125px;
+   height: 125px;
+   background-color: #C1ABF0;
+   animation: bubbling9 1s linear reverse infinite;
+}
+
+@keyframes bubbling9 {
+
+   0% {
+      bottom: 10px;
+      right: 100px;
+   }
+
+   50% {
+      bottom: 60px;
+      right: 180px;
+   }
+
+   100% {
+      bottom: 120px;
+      right: 90px;
+   }
+}
+
+#bubble10 {
+   width: 100px;
+   height: 100px;
+   background-color: #ABB6F0;
+   animation: bubbling10 1s linear normal infinite;
+}
+
+@keyframes bubbling10 {
+
+   0% {
+      bottom: 10px;
+      right: 30px;
+   }
+
+   25% {
+      bottom: 30px;
+      right: 100px;
+   }
+
+   50% {
+      bottom: 60px;
+      right: 120px;
+   }
+
+   75% {
+      bottom: 90px;
+      right: 90px;
+   }
+
+   100% {
+      bottom: 125px;
+      right: 50px;
+   }
+}
+
+#bubble1:hover,
+#bubble2:hover,
+#bubble3:hover,
+#bubble4:hover,
+#bubble5:hover,
+#bubble6:hover,
+#bubble7:hover,
+#bubble9:hover,
+#bubble10:hover {
+   transform: scale(1.15);
+   opacity: 0;
+}
 
 main {
-   width: 1100px;
+   width: 1150px;
    box-sizing: border-box;
    margin: auto;
    display: flex;
@@ -106,21 +401,33 @@ main ul {
    padding: 0;
 }
 
+.back h2 {
+   margin: 10px 0;
+   color: #2D4C89;
+   text-align: left;
+}
+
+a,
+a:hover {
+   color: #2D4C89;
+   text-decoration: none;
+}
+
 section {
    flex: 1;
-   margin: 15px;
+   margin: 25px;
 }
 
 .shell {
    aspect-ratio: 1 / 1;
    position: relative;
    perspective: 1000px;
+   cursor: pointer;
 }
 
 .back,
 .front {
    width: 100%;
-   /* idk why i have to put aspect-ratio twice tbh */
    aspect-ratio: 1 / 1;
    box-sizing: border-box;
    border-radius: 35px;
@@ -133,18 +440,27 @@ section {
 }
 
 .back {
-   padding: 20px 100px;
-   /* chaneg color? */
-   background-color: pink;
+   padding: 35px;
+   background-color: white;
    transform: rotateX(-180deg);
 }
 
 .front {
 
-   background-image: url(images/testPrincess.png);
+   /* background-image: url(images/testPrincess.png);
    background-size: cover;
-   background-color: pink;
+   background-color: #EBB6CE; */
+   /* if no time for drawing, use this gradient */
+   background: linear-gradient(180deg, #CCBDF2 0%, #EFE0ED 50%, #D6BED9 100%);
    transform: rotateX(0);
+}
+
+.front h2 {
+   /* display: none; */
+   /* if no time for drawing, use these settings*/
+   color: #6182C3;
+   font-size: 36px;
+   padding: 100px;
 }
 
 section:hover .back {
@@ -156,12 +472,17 @@ section:hover .front {
 }
 
 footer {
-   padding: 100px;
+   height: 100px;
+   margin: auto;
    display: flex;
-   justify-content: space-between;
-   background-image: url(images/testSand.png);
-   background-size: 100%;
-   /* background-attachment: fixed; */
-   background-repeat: no-repeat;
-   /* background-color: #466EBC; */
+   align-items: center;
+   justify-content: space-around;
+   background-image: url(images/sandFooter.png);
+   background-size: cover;
+}
+
+footer p,
+footer a,
+footer a:hover {
+   color: white;
 }
