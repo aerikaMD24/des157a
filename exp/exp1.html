@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Please open the console to see the code in action!</h2>
+
+    <script>
+        
+        /* User Prompted for number between 1-100 (with error handing) and then all the numbers are listed down. The numbers divisible by 3 are replaced with "Fizz", number divisble by 5 are replaced with "Buzz" and numbers divisible by 7 are replaced with "Pop" */
+
+        var userNum = prompt("Pick a number from 1-100:", "");
+        
+        if (userNum > 0 && userNum <= 100) {
+            for (var i = 0; i <= userNum; i++) {
+                if (i % 3 == 0) {
+                    console.log("Fizz");
+                } else if (i % 5 == 0) {
+                    console.log("Buzz");
+                } else if (i % 7 == 0) {
+                    console.log("Pop");
+                } else {
+                    console.log(i);
+                }
+            }
+        } else {
+            console.log(`ERROR: ${userNum} is not a number from 1-100.`)
+        }
+
+        
+    </script>
+
+</body>
+</html>

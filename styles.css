@@ -426,7 +426,9 @@ section {
 }
 
 .back,
-.front {
+#front1,
+#front2,
+#front3 {
    width: 100%;
    aspect-ratio: 1 / 1;
    box-sizing: border-box;
@@ -445,20 +447,34 @@ section {
    transform: rotateX(-180deg);
 }
 
-.front {
-
-   /* background-image: url(images/testPrincess.png);
-   background-size: cover;
-   background-color: #EBB6CE; */
-   /* if no time for drawing, use this gradient */
-   background: linear-gradient(180deg, #CCBDF2 0%, #EFE0ED 50%, #D6BED9 100%);
+#front1,
+#front2,
+#front3 {
    transform: rotateX(0);
 }
 
-.front h2 {
-   /* display: none; */
-   /* if no time for drawing, use these settings*/
-   color: #6182C3;
+#front1 {
+   background-image: url(images/studiosMermaid.jpeg);
+   background-size: cover;
+   background-color: #EBB6CE;
+}
+
+#front2 {
+   background-image: url(images/r&dMermaid.jpeg);
+   background-size: cover;
+   background-color: #EBB6CE;
+}
+
+#front3 {
+   background-image: url(images/finalMermaid.jpeg);
+   background-size: cover;
+   background-color: #EBB6CE;
+}
+
+#front1 h2,
+#front2 h2,
+#front3 h2 {
+   color: #44609a;
    font-size: 36px;
    padding: 100px;
 }
@@ -467,7 +483,9 @@ section:hover .back {
    transform: rotateX(0);
 }
 
-section:hover .front {
+section:hover #front1,
+section:hover #front2,
+section:hover #front3 {
    transform: rotateX(180deg);
 }
 
