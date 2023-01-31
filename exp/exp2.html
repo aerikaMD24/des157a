@@ -8,8 +8,9 @@
     <style>
         #roundedDiv {
             background-color: aquamarine;
-            width: 600px;
-            height: 100px;
+            width: 500px;
+            height: 500px;
+            margin: auto;
         }
     </style>
 </head>
@@ -19,9 +20,10 @@
     <div id="roundedDiv"></div>
 
     <script>
-        var userNum = prompt("Pick a number from 1-100:", "");
+        var userNum = prompt("How much percentage do you thing it takes to turn a square into a circle? Guess! (Hint: Pick a number from 1-100:", "");
         var radiusNum = userNum + "%";
-        document.getElementById(roundedDiv).style.borderRadius = "radiusNum";
+        console.log(radiusNum);
+        document.getElementById("roundedDiv").style.borderRadius = "radiusNum";
 
     </script>
     
