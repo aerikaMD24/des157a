@@ -20,10 +20,11 @@
     <div id="roundedDiv"></div>
 
     <script>
+        // Changes the border-raidus of a div to turn it from a square to either a rounded square of circle depending on user input
         var userNum = prompt("How much percentage do you thing it takes to turn a square into a circle? Guess! (Hint: Pick a number from 1-100:", "");
-        var radiusNum = userNum + "%";
+        var radiusNum = userNum + '%';
         console.log(radiusNum);
-        document.getElementById("roundedDiv").style.borderRadius = "radiusNum";
+        document.getElementById('roundedDiv').style.borderRadius = radiusNum;
 
     </script>
     
