@@ -1,0 +1,204 @@
+body {
+    max-width: 1200px;
+    min-width: 900px;
+    margin: auto;
+    background-color: #122253;
+ 
+    color: white;
+    font-family: 'Glory', sans-serif;
+    font-size: 20px;
+ }
+
+ header {
+    position: relative;
+    height: 100px;
+ }
+
+ h1 {
+    position: absolute;
+    right: 180px;
+ }
+
+ #inputs {
+    
+    width: 580px;
+    /* might not need fixed height ??? */
+    box-sizing: border-box;
+    padding: 2px 70px ;
+    position: absolute;
+    right: 30px;
+    
+    background: linear-gradient(180deg, rgba(139, 226, 232, 0.5) 0%, rgba(162, 220, 221, 0.275) 51.04%, rgba(139, 226, 232, 0.425) 100%);
+    border: 10px dashed #7DB2BE;
+    border-radius: 35px;
+ }
+
+ #login {
+    display: none;
+    /* display: flex;
+    flex-direction: column; */
+ }
+
+ #speechParts {
+    display: none;
+    /* display: flex;
+    flex-direction: column; */
+ }
+
+ #general {
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+ }
+
+ .progress {
+    
+    display: flex;
+    justify-content: center;
+ }
+
+ fieldset {
+    border: none;
+ }
+
+ .dot1, .dot2, .dot3 {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 100%;
+ }
+
+ .dot3{
+    background-color: #55BDD3;
+ }
+
+
+input, select {
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+fieldset label, select {
+    margin-bottom: 10px;
+}
+
+ .buttons {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ #eye {
+    width: 200;
+    height: 180px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 440px;
+    top: 360px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(125, 178, 190, 0.7);
+    border-radius: 35px;
+    font-family: 'Anonymous Pro', monospace;
+ }
+
+ #eye p {
+    margin-bottom: 5px;
+    margin-top: 0;
+ }
+ 
+ #eye img {
+    width: 80%;
+    margin-bottom: 5px;
+ }
+
+ #story {
+    width: 550px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 15px;
+    top: 510px;
+    padding: 7px;
+    background: rgba(125, 178, 190, 0.5);
+    border: 7px dashed #749FA8;
+    border-radius: 35px;
+    font-family: 'Anonymous Pro', monospace;
+ }
+
+ #pic {
+    width: 560px;
+    height: 525px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 55px;
+    top: -30px;
+    padding: 50px;
+    background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
+    border: 10px dashed #749FA8;
+    border-radius: 37px;
+    font-family: 'Anonymous Pro', monospace;
+ }
+
+ #pic p {
+    font-size: larger;
+ }
+
+ #possibleOverlay {
+    width: 600px;
+    height: 300px;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Anonymous Pro', monospace;
+ }
+
+ #possibleOverlay p {
+    width: 275px;
+    padding: 10px;
+    background-color: #6FA2B1;
+ }
+
+ #desc1 {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+ }
+
+ #desc2 {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+ }
+
+
+
+#bg1 {
+    width: 585px;
+    height: 700px;
+    position: absolute;
+    left: -35px;
+    top: 50px;
+    background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
+    border-radius: 35px;
+}
+
+#bg2 {
+    width: 820px;
+    height: 450px;
+    position: absolute;
+    left: 440px;
+    top: -25px;
+    background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
+    border-radius: 35px;
+}
+
+#bg3 {
+    width: 635px;
+    height: 295px;
+    left: 610px;
+    top: 475px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
+    border-radius: 35px;
+}
