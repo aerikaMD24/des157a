@@ -52,6 +52,10 @@ body {
    padding: 10px;
  }
 
+ article p {
+  font-size: 20px;
+ }
+
  time {
     position: absolute;
     top: 100px;
