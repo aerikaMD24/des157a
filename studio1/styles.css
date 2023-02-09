@@ -89,7 +89,6 @@ fieldset label, select {
  }
 
  #eye {
-    width: 200;
     height: 180px;
     box-sizing: border-box;
     position: absolute;
