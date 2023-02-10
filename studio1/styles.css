@@ -1,3 +1,15 @@
+/* Running list of Tasks:
+   -Position Relative the main container and then absolute the stuff inside and then potentially use %? (px if no time)
+   -Hidden and visisble sections for the fieldsets
+   -css animation of slightly swaying divs
+   -css animation of typing??? javascript???
+   -css animation of divs growing into output 
+   -css filters???
+   FIX Z INDEX
+*/
+
+
+
 body {
     max-width: 1200px;
     min-width: 900px;
@@ -19,7 +31,7 @@ body {
     right: 180px;
  }
 
- #inputs {
+ form {
     
     width: 580px;
     /* might not need fixed height ??? */
@@ -33,22 +45,13 @@ body {
     border-radius: 35px;
  }
 
- #login {
-    display: none;
-    /* display: flex;
-    flex-direction: column; */
+ .hidden {
+   display: none;
  }
 
- #speechParts {
-    display: none;
-    /* display: flex;
-    flex-direction: column; */
- }
-
- #general {
-    /* display: none; */
-    display: flex;
-    flex-direction: column;
+ .showing {
+   display: flex;
+   flex-direction: column;
  }
 
  .progress {
@@ -69,7 +72,7 @@ body {
     border-radius: 100%;
  }
 
- .dot3{
+ .dot2{
     background-color: #55BDD3;
  }
 
@@ -170,8 +173,6 @@ fieldset label, select {
     left: 10px;
  }
 
-
-
 #bg1 {
     width: 585px;
     height: 700px;
@@ -180,6 +181,7 @@ fieldset label, select {
     top: 50px;
     background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
     border-radius: 35px;
+    z-index: -1;
 }
 
 #bg2 {
@@ -190,6 +192,7 @@ fieldset label, select {
     top: -25px;
     background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
     border-radius: 35px;
+    z-index: -1;
 }
 
 #bg3 {
@@ -200,4 +203,6 @@ fieldset label, select {
     position: absolute;
     background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
     border-radius: 35px;
+    z-index: -1;
 }
+

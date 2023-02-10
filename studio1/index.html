@@ -18,10 +18,9 @@
     </header>
     
 
-    <div id="inputs">
-        <form action="processor.php" method="POST">
 
-            <fieldset id="login">
+        <form>
+            <fieldset id="login" class="hidden">
                 <div class="progress">
                     <div class="dot1"></div>
                     <div class="dot2"></div>
@@ -29,13 +28,16 @@
                 </div>
 
                 <label for="fName">First Name</label>
-                <input type="text" name="fName" id="fName" value="Hunter">
+                <input type="text" id="fName" value="Hunter" required>
 
                 <label for="lName">Last Name</label>
-                <input type="text" name="lName" id="lName" value="Wen">
+                <input type="text" id="lName" value="Wen" required>
 
                 <label for="num">Number</label>
-                <input type="text" name="num" id="num" value="11">
+                <input type="text" id="num" value="11" required>
+
+                <label for="num">Location</label>
+                <input type="text" id="location" value="Switzerland" required>
 
                 <label for="org">Pick an Organization:</label>
                 <select name="org" id="org">
@@ -45,12 +47,12 @@
                 </select>
 
                 <div class="buttons">
-                    <input type="button" name="next" value="Next>>">
+                    <button>Next>></button>
                 </div>
                 
             </fieldset>
 
-            <fieldset id="speechParts">
+            <fieldset id="speechParts" class="showing">
                 <div class="progress">
                     <div class="dot1"></div>
                     <div class="dot2"></div>
@@ -58,28 +60,28 @@
                 </div>
 
                 <label for="adj">Adjective</label>
-                <input type="text" name="adj" id="adj" value="energetic">
+                <input type="text" id="adj" value="energetic" required>
 
                 <label for="rVerb">Root Verb</label>
-                <input type="text" name="rVerb" id="rVerb" value="Run">
+                <input type="text" id="rVerb" value="Run" required>
 
                 <label for="verb1">'-ing' Verb 1</label>
-                <input type="text" name="verb1" id="verb1" value="singing">
+                <input type="text" id="verb1" value="singing" required>
 
                 <label for="verb2">'-ing' Verb 2</label>
-                <input type="text" name="verb2" id="verb2" value="burping">
+                <input type="text" id="verb2" value="burping" required>
 
                 <label for="plNoun">Plural Noun</label>
-                <input type="text" name="plNoun" id="plNoun" value="rubber ducks">
+                <input type="text" name="plNoun" id="plNoun" value="rubber ducks" required>
 
                 <div class="buttons">
-                    <input type="button" name="prev" value="<<Prev">
-                    <input type="button" name="next" value="Next>>">
+                    <button>&lt&ltPrev</button>
+                    <button>Next>></button>
                 </div>
                 
             </fieldset>
 
-            <fieldset id="general">
+            <fieldset id="general" class="hidden">
                 <div class="progress">
                     <div class="dot1"></div>
                     <div class="dot2"></div>
@@ -87,27 +89,28 @@
                 </div>
 
                 <label for="color">Color</label>
-                <input type="text" name="color" id="color" value="energetic">
+                <input type="text" id="color" value="purple" required>
 
                 <label for="crime">Crime</label>
-                <input type="text" name="crime" id="crime" value="Run">
+                <input type="text" id="crime" value="loitering" required>
 
                 <label for="food1">Food Item 1</label>
-                <input type="text" name="food1" id="food1" value="singing">
+                <input type="text" id="food1" value="doughnut" required>
 
                 <label for="food2">Food Item 2</label>
-                <input type="text" name="food2" id="food2" value="Mcdonald's burger">
+                <input type="text" id="food2" value="Mcdonald's burger" required>
 
                 <label for="vehicle">Vehicle</label>
-                <input type="text" name="vehicle" id="vehicle" value="tricycle">
-
+                <input type="text" id="vehicle" value="tricycle" required>
                 <div class="buttons">
-                    <input type="button" name="prev" value="<<Prev">
-                    <input type="submit" name="send" value="Submit">
+                    <button>&lt&ltPrev</button>
+                    <button>Access Madlib Database</button> 
                 </div>
             </fieldset>
         </form>
     </div>
+
+    <!-- https://stackoverflow.com/questions/14659240/angle-bracket-without-triggering-html-code -->
 
 <div id="eye">
     <p>Eye Color:</p>
@@ -116,9 +119,9 @@
 </div>
 
 <div id="story">
-    <p>
+    <!-- <p>
         Last seen in <strong><u>Switzerland</u></strong>, the suspect, with multiple counts of <strong><u>loitering</u></strong>, identity fraud and <strong><u>doughnut</u></strong> laundering is likely to be behind the case of the <strong><u>11</u></strong> missing <strong><u>rubber ducks</u></strong>. Authorities tried to arrest them but failed when they threw a <strong><u>McDonald's burger</u></strong> in Officer <strong><u>Wen</u></strong>’s face and then proceeded to escape via stolen <strong><u>tricycle</u></strong>. 
-    </p>
+    </p> -->
 </div>
 <div id="pic">
     <p>Name: <strong><u>Hunter</u></strong> Mc<strong><u>Run</u></strong>ner</p>
