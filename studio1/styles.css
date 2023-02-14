@@ -1,15 +1,3 @@
-/* Running list of Tasks:
-   -Position Relative the main container and then absolute the stuff inside and then potentially use %? (px if no time)
-   -Hidden and visisble sections for the fieldsets
-   -css animation of slightly swaying divs
-   -css animation of typing??? javascript???
-   -css animation of divs growing into output 
-   -css filters???
-   FIX Z INDEX
-*/
-
-
-
 body {
     max-width: 1200px;
     min-width: 900px;
@@ -19,190 +7,266 @@ body {
     color: white;
     font-family: 'Glory', sans-serif;
     font-size: 20px;
- }
-
- header {
     position: relative;
-    height: 100px;
- }
+}
 
- h1 {
+h1 {
     position: absolute;
-    right: 180px;
- }
+    right: 15%;
+} 
 
- form {
-    
+h2 {
+   font-size: 20pt;
+   text-align: center;
+}
+
+form {
     width: 580px;
-    /* might not need fixed height ??? */
+    height: 630px;
     box-sizing: border-box;
-    padding: 2px 70px ;
+    padding: 35px 70px ;
     position: absolute;
+    top: 95px;
     right: 30px;
-    
     background: linear-gradient(180deg, rgba(139, 226, 232, 0.5) 0%, rgba(162, 220, 221, 0.275) 51.04%, rgba(139, 226, 232, 0.425) 100%);
-    border: 10px dashed #7DB2BE;
+    border: 8px dashed   #7DB2BE;
     border-radius: 35px;
- }
+}
 
- .hidden {
+.hidden {
    display: none;
- }
+}
 
- .showing {
+ .showFlex {
    display: flex;
    flex-direction: column;
- }
+}
 
- .progress {
-    
+.showBlock {
+   display: block;
+}
+
+.progress {
     display: flex;
     justify-content: center;
- }
+}
 
- fieldset {
-    border: none;
- }
+.dot {
+   width: 10px;
+   height: 10px;
+   margin: 5px;
+   background-color: white;
+   border-radius: 100%;
+}
 
- .dot1, .dot2, .dot3 {
-    width: 10px;
+.current {
+   width: 10px;
     height: 10px;
     margin: 5px;
-    background-color: white;
-    border-radius: 100%;
- }
-
- .dot2{
     background-color: #55BDD3;
- }
+    border-radius: 100%;
+}
 
+ fieldset {
+   border: none;
+}
 
 input, select {
     height: 45px;
     margin-bottom: 15px;
 }
 
+input:focus, select:focus {
+   background-color: azure;
+   outline-color: #55BDD3;
+}
+
 fieldset label, select {
     margin-bottom: 10px;
 }
 
- .buttons {
+.buttons {
     display: flex;
     justify-content: space-between;
- }
+}
 
- #eye {
-    height: 180px;
-    box-sizing: border-box;
-    position: absolute;
-    left: 440px;
-    top: 360px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(125, 178, 190, 0.7);
-    border-radius: 35px;
-    font-family: 'Anonymous Pro', monospace;
- }
+#twoCol {
+   display: flex;
+   justify-content: space-between;
+}
 
- #eye p {
-    margin-bottom: 5px;
-    margin-top: 0;
- }
- 
- #eye img {
-    width: 80%;
-    margin-bottom: 5px;
- }
+#twoCol p {
+   line-height: 1.4em;
+}
 
- #story {
-    width: 550px;
-    box-sizing: border-box;
-    position: absolute;
-    left: 15px;
-    top: 510px;
-    padding: 7px;
-    background: rgba(125, 178, 190, 0.5);
-    border: 7px dashed #749FA8;
-    border-radius: 35px;
-    font-family: 'Anonymous Pro', monospace;
- }
+span {
+   text-decoration: underline;
+   font-weight: bold;
+}
 
- #pic {
-    width: 560px;
-    height: 525px;
-    box-sizing: border-box;
-    position: absolute;
-    left: 55px;
-    top: -30px;
-    padding: 50px;
-    background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
-    border: 10px dashed #749FA8;
-    border-radius: 37px;
-    font-family: 'Anonymous Pro', monospace;
- }
-
- #pic p {
-    font-size: larger;
- }
-
- #possibleOverlay {
-    width: 600px;
-    height: 300px;
-    box-sizing: border-box;
-    position: relative;
-    font-family: 'Anonymous Pro', monospace;
- }
-
- #possibleOverlay p {
-    width: 275px;
+#desc1o, #desc1s, #desc1a, #desc2o, #desc2s, #desc2a {
     padding: 10px;
     background-color: #6FA2B1;
- }
-
- #desc1 {
     position: absolute;
-    top: 10px;
-    right: 30px;
- }
+    z-index: 1;
+}
 
- #desc2 {
-    position: absolute;
-    top: 200px;
-    left: 10px;
- }
+#desc1o, #desc1s, #desc1a {
+    top: 100px;
+    left: 20%;
+}
+
+#desc2o, #desc2s, #desc2a {
+    top: 330px;
+    left: 0;
+}
+
+#worldPic {
+   width: 620px;
+   height: 325px;
+   box-sizing: border-box;
+   position: absolute;
+   left: 1%;
+   top: -40px;
+   padding: 50px;
+   background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
+   border: 10px dashed #749FA8;
+   border-radius: 37px;
+   font-family: 'Anonymous Pro', monospace;
+   transition: 1s height linear;
+}
+
+#world {
+  background-image: url(images/worldMap.png);
+  background-size: cover;
+  height: 200px;
+  margin-top: 15px;;
+  animation: 2.5s swipe ease-out alternate infinite;
+}
+
+@keyframes swipe {
+  0% {width: 0}
+  100% {width: 465px}
+}
+
+#welcomeEye {
+   height: 280px;
+   width: 370px;
+   box-sizing: border-box;
+   position: absolute;
+   right: 52%;
+   top: 375px;
+   padding: 74px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: rgba(125, 178, 190, 0.7);
+   border-radius: 35px;
+   font-family: 'Anonymous Pro', monospace;
+   z-index: 1;
+   transition: 1s all linear;
+}
+
+#welcomeEye p {
+   margin-bottom: 5px;
+   margin-top: 0;
+   text-align: center;
+}
+
+#welcome p {
+  text-align: left;
+}
+
+#eyeImg {
+  background-image: url(images/testEye.png);
+  background-size: cover;
+  width: 150px;
+  margin-top: 7px;
+  animation: 2s swipe ease-in-out alternate infinite;
+}
+
+#radarStory {
+   width: 250px;
+   box-sizing: border-box;
+   position: absolute;
+   left: 1%;
+   top: 300px;
+   padding: 15px;
+   background: rgba(125, 178, 190, 0.5);
+   border: 7px dashed #749FA8;
+   border-radius: 35px;
+   font-family: 'Anonymous Pro', monospace;
+   transition: 1s width linear;
+   transition: 1s top linear;
+}
+
+#radar {
+  background-image: url(images/radarBase.png);
+  background-size: contain;
+}
+
+#radar img {
+  width: 207px;
+}
+
+#radar1 {
+  animation: 1.5s fade linear alternate-reverse infinite
+}
+
+#radar2 {
+  animation: 1.5s fade linear alternate infinite
+}
+
+@keyframes fade {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
 
 #bg1 {
     width: 585px;
     height: 700px;
     position: absolute;
-    left: -35px;
-    top: 50px;
+    left: -3%;
     background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
     border-radius: 35px;
     z-index: -1;
+    animation: 5s sway1 ease-in-out alternate infinite;
+}
+
+@keyframes sway1 {
+   0% {top: -20px}
+   100% {top: 100px}
 }
 
 #bg2 {
     width: 820px;
     height: 450px;
     position: absolute;
-    left: 440px;
     top: -25px;
     background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
     border-radius: 35px;
     z-index: -1;
+    animation: 5s sway2 ease-in-out alternate infinite;
+}
+
+@keyframes sway2 {
+   0% {left: 30%}
+   100% {left: 50%}
 }
 
 #bg3 {
     width: 635px;
     height: 295px;
-    left: 610px;
     top: 475px;
     position: absolute;
     background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
     border-radius: 35px;
     z-index: -1;
+    animation: 5s sway3 ease-in-out alternate infinite;
+}
+
+@keyframes sway3 {
+   0% {left: 57%}
+   100% {left: 47%}
 }
 

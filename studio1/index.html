@@ -13,31 +13,31 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Crack the Madlib</h1>
-    </header>
-    
 
+    <h1>Crack the Madlib</h1>
+
+    <main>
 
         <form>
-            <fieldset id="login" class="hidden">
+
+            <fieldset id="login" class="showFlex">
                 <div class="progress">
-                    <div class="dot1"></div>
-                    <div class="dot2"></div>
-                    <div class="dot3"></div>
+                    <div class="current"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
                 </div>
 
                 <label for="fName">First Name</label>
-                <input type="text" id="fName" value="Hunter" required>
+                <input type="text" id="fName">
 
                 <label for="lName">Last Name</label>
-                <input type="text" id="lName" value="Wen" required>
+                <input type="text" id="lName">
 
                 <label for="num">Number</label>
-                <input type="text" id="num" value="11" required>
+                <input type="text" id="num">
 
                 <label for="num">Location</label>
-                <input type="text" id="location" value="Switzerland" required>
+                <input type="text" id="location">
 
                 <label for="org">Pick an Organization:</label>
                 <select name="org" id="org">
@@ -52,27 +52,27 @@
                 
             </fieldset>
 
-            <fieldset id="speechParts" class="showing">
+            <fieldset id="speechParts" class="hidden">
                 <div class="progress">
-                    <div class="dot1"></div>
-                    <div class="dot2"></div>
-                    <div class="dot3"></div>
+                    <div class="dot"></div>
+                    <div class="current"></div>
+                    <div class="dot"></div>
                 </div>
 
                 <label for="adj">Adjective</label>
-                <input type="text" id="adj" value="energetic" required>
+                <input type="text" id="adj">
 
                 <label for="rVerb">Root Verb</label>
-                <input type="text" id="rVerb" value="Run" required>
+                <input type="text" id="rVerb" placeholder="eg Run, Fly">
 
                 <label for="verb1">'-ing' Verb 1</label>
-                <input type="text" id="verb1" value="singing" required>
+                <input type="text" id="verb1" placeholder="eg burping, dancing">
 
                 <label for="verb2">'-ing' Verb 2</label>
-                <input type="text" id="verb2" value="burping" required>
+                <input type="text" id="verb2" placeholder="eg dancing, burping">
 
                 <label for="plNoun">Plural Noun</label>
-                <input type="text" name="plNoun" id="plNoun" value="rubber ducks" required>
+                <input type="text" name="plNoun" id="plNoun">
 
                 <div class="buttons">
                     <button>&lt&ltPrev</button>
@@ -83,60 +83,126 @@
 
             <fieldset id="general" class="hidden">
                 <div class="progress">
-                    <div class="dot1"></div>
-                    <div class="dot2"></div>
-                    <div class="dot3"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="current"></div>
                 </div>
 
                 <label for="color">Color</label>
-                <input type="text" id="color" value="purple" required>
+                <input type="text" id="color">
 
                 <label for="crime">Crime</label>
-                <input type="text" id="crime" value="loitering" required>
+                <input type="text" id="crime">
 
-                <label for="food1">Food Item 1</label>
-                <input type="text" id="food1" value="doughnut" required>
+                <label for="food1">Singular Food Item 1</label>
+                <input type="text" id="food1" placeholder="eg chocolate, cheese">
 
-                <label for="food2">Food Item 2</label>
-                <input type="text" id="food2" value="Mcdonald's burger" required>
+                <label for="food2">Singular Food Item 2</label>
+                <input type="text" id="food2" placeholder="eg cheese, chocoate">
 
                 <label for="vehicle">Vehicle</label>
-                <input type="text" id="vehicle" value="tricycle" required>
+                <input type="text" id="vehicle">
                 <div class="buttons">
                     <button>&lt&ltPrev</button>
                     <button>Access Madlib Database</button> 
                 </div>
             </fieldset>
+
+            <div id="outputsList" class="hidden">
+                <h2>>>>> Processing data for MadLib &lt&lt&lt&lt</h2>
+                <div id="twoCol">
+                    <p>
+                        >> FIRST NAME: <br>
+                        >> LAST NAME: <br>
+                        >> NUMBER: <br>
+                        >> LOCATION: <br>
+                        >> ORGANIZATION <br>
+                        >> ADJECTIVE: <br>
+                        >> ROOT VERB: <br>
+                        >> -ING VERB 1: <br>
+                        >> -ING VERB 2: <br>
+                        >> PLURAL NOUN: <br>
+                        >> COLOR: <br>
+                        >> CRIME: <br>
+                        >> FOOD ITEM 1: <br>
+                        >> FOOD ITEM2: <br>
+                        >> VEHICLE: 
+                    </p>
+                    <p>
+                        <span class="word0"></span><br>
+                        <span class="word1"></span><br>
+                        <span class="word2"></span><br>
+                        <span class="word3"></span><br>
+                        <span id="selected"></span><br>
+                        <span class="word4"></span><br>
+                        <span class="word5"></span><br>
+                        <span class="word6"></span><br>
+                        <span class="word7"></span><br>
+                        <span class="word8"></span><br>
+                        <span class="word9"></span><br>
+                        <span class="word10"></span><br>
+                        <span class="word11"></span><br>
+                        <span class="word12"></span> <br>
+                        <span class="word13"></span>
+                    </p>
+                </div>
+                <div class="buttons">
+                    <button>Crack the Madlib Again</button>
+                </div>
+
+            </div>
+
         </form>
-    </div>
 
-    <!-- https://stackoverflow.com/questions/14659240/angle-bracket-without-triggering-html-code -->
+        <p id="desc1o" class="hidden">Talents include <span class="word6"></span> and <span class="word7"></span></p>
+        <p id="desc2o" class="hidden">Tall dark and <span class="word4"></span></p>
 
-<div id="eye">
-    <p>Eye Color:</p>
-    <p><strong><u>Purple</u></strong></p>
-    <img src="images/testEye.png" alt="The Suspect's Eye'">
-</div>
+        <p id="desc1s" class="hidden">Known for <span class="word6"></span> and <span class="word7"></span> vandalizing</p>
+        <p id="desc2s" class="hidden">Known hideouts in <span class="word3"></span></p>
 
-<div id="story">
-    <!-- <p>
-        Last seen in <strong><u>Switzerland</u></strong>, the suspect, with multiple counts of <strong><u>loitering</u></strong>, identity fraud and <strong><u>doughnut</u></strong> laundering is likely to be behind the case of the <strong><u>11</u></strong> missing <strong><u>rubber ducks</u></strong>. Authorities tried to arrest them but failed when they threw a <strong><u>McDonald's burger</u></strong> in Officer <strong><u>Wen</u></strong>’s face and then proceeded to escape via stolen <strong><u>tricycle</u></strong>. 
-    </p> -->
-</div>
-<div id="pic">
-    <p>Name: <strong><u>Hunter</u></strong> Mc<strong><u>Run</u></strong>ner</p>
-    <img src="images/suspect.jpg" alt="The Suspect in Question">
-</div>
+        <p id="desc1a" class="hidden">Likes to hide poison in <span class="word8"></span> and <span class="word12"></span></p>
+        <p id="desc2a" class="hidden">Luckily has not heard of <span class="word7"></span></p>
 
-<div id="possibleOverlay">
-    <p id="desc1">Tall dark and <strong><u>energetic</u></strong></p>
-    <p id="desc2">Talents include <strong><u>singing</u></strong>, hacking and <strong><u>burping</u></strong></p>
-</div>
+        <div id="worldPic">
+            <div id="world" class="showBlock"></div>
+            <div id="pic" class="hidden">
+                <h2>Name: <span class="word0">Hunter</span> Mc<span class="word5">Run</span>er</h2>
+                <img id=suspect src="images/suspect.jpg" alt="The Suspect in Question">
+            </div>
+        </div>
 
-<div id="bg1"></div>
-<div id="bg2"></div>
-<div id="bg3"></div>
+        <div id="welcomeEye">
+            <div id="welcome" class="showBlock">
+            </div>
+            <div id="eye" class="hidden">
+                <p>Eye Color:</p>
+                <p id="eyeColor"><span class="word9"></span></p>
+                <img src="images/eye.png" alt="The Suspect's Eye'">
+            </div>
+        </div>
 
+        <div id="radarStory">
+            <p id = "officerStory" class = "hidden">
+                Last seen in <span class="word3"></span>, the suspect, with multiple counts of <span class="word10"></span>, identity fraud and <span class="word11"></span> laundering is likely to be behind the case of the <span class="word2"></span> missing <span class="word8"></span>. Authorities tried to arrest them but failed when they threw a <span class="word12"></span> in the face of Officer <span class="word1"></span> and then proceeded to escape via <span class="word13"></span>. 
+            </p>
+            <p id = "sheriffStory" class = "hidden">
+                The <span class="word4"></span>-eyed bandit is at it again after <span class="word2"></span> years! They were found raiding a local <span class="word8"></span> and <span class="word11"></span> shop. Not only that but they stole the lunch of Sheriff <span class="word1"></span> before yelling 'Yee-Haw!' and skedaddling. There goes the <span class="word12"></span>. Then again, maybe that's what the Sheriff gets for <span class="word7"></span> and <span class="word6"></span> on the job.  
+            </p>
+            <p id = "agentStory" class = "hidden">
+                Proceed with caution and be wary of any <span class="word11"></span> packages you recieve with no gift tag: Subject <span class="word2"></span> has escaped.
+                They've already smashed the <span class="word13"></span> of Agent <span class="word1"></span>, drove while <span class="word6"></span> and committed <span class="word10"></span>. Be on the look out for them, <span class="word4"></span> sources claim they're headed to <span class="word3"></span>. 
+            </p>
+            <div id="radar" class="showFlex">
+                <img id="radar1" src="images/radar1.png" alt="white basic radar system base">
+                <img id="radar2" src="images/radar2.png" alt="white basic radar system base again">
+            </div>
+        </div>
+
+        <div id="bg1"></div>
+        <div id="bg2"></div>
+        <div id="bg3"></div>
+
+    </main>
 
 </body>
 </html>
