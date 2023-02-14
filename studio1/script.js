@@ -1,6 +1,4 @@
-(function(){
-    // typewriter?
-    // 3 possible scenarios
+(function () {
 
     'use strict';
     console.log('reading js')
@@ -35,39 +33,39 @@
     const welcomeEye = document.querySelector('#welcomeEye');
     const welcome = document.querySelector('#welcome');
     const eye = document.querySelector('#eye');
-    
 
-    btn[0].addEventListener('click', function(e) {
+
+    btn[0].addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         inputs[0].className = 'hidden';
         inputs[1].className = 'showFlex';
     })
 
-    btn[1].addEventListener('click', function(e) {
+    btn[1].addEventListener('click', function (e) {
         e.preventDefault();
         inputs[1].className = 'hidden';
         inputs[0].className = 'showFlex';
     })
 
-    btn[2].addEventListener('click', function(e) {
+    btn[2].addEventListener('click', function (e) {
         e.preventDefault();
         inputs[1].className = 'hidden';
         inputs[2].className = 'showFlex';
     })
 
-    btn[3].addEventListener('click', function(e) {
+    btn[3].addEventListener('click', function (e) {
         e.preventDefault();
         inputs[2].className = 'hidden';
         inputs[1].className = 'showFlex';
     })
 
-    btn[4].addEventListener('click', function(e){
+    btn[4].addEventListener('click', function (e) {
         e.preventDefault();
         processFormData(formData);
     })
 
-    btn[5].addEventListener('click', function(e){
+    btn[5].addEventListener('click', function (e) {
         e.preventDefault();
         playAgain();
     })
@@ -77,13 +75,13 @@
         let emptyfields = [];
         let counter = 0;
         for (var i = 0; i < formData.length; i++) {
-            if(formData[i].value) {
+            if (formData[i].value) {
                 words.push(formData[i].value);
             } else {
                 emptyfields.push(counter);
             }
             counter++;
-        } 
+        }
         if (emptyfields.length > 0) {
             showErrors(formData, emptyfields);
         } else {
@@ -105,7 +103,7 @@
     }
 
     function makeMadlib(words) {
-        
+
         const word0 = document.querySelectorAll('.word0');
         const word1 = document.querySelectorAll('.word1');
         const word2 = document.querySelectorAll('.word2');
@@ -165,8 +163,8 @@
         for (const eachThirteen of word13) {
             eachThirteen.innerHTML = words[13];
         }
-        
-        
+
+
 
         for (let i = 0; i < formData.length; i++) {
             formData[i].value = '';
@@ -178,24 +176,38 @@
         suspect.src = images[getRandom(images.length)];
         worldPic.style.height = '525px';
         world.className = 'hidden'
-        setTimeout(function() {pic.className = 'showBlock';}, 1000)
+        setTimeout(function () {
+            pic.className = 'showBlock';
+        }, 1000)
     }
 
     function getRandom(max) {
-        return Math.floor(Math.random() * (max) );
-      }
+        return Math.floor(Math.random() * (max));
+    }
 
     function desc() {
 
         if (selection.value == 'officer') {
-            setTimeout(function() {desc1o.className = 'showBlock';}, 2000)
-             setTimeout(function() {desc2o.className = 'showBlock';}, 2500)
+            setTimeout(function () {
+                desc1o.className = 'showBlock';
+            }, 2000)
+            setTimeout(function () {
+                desc2o.className = 'showBlock';
+            }, 2500)
         } else if (selection.value == 'sheriff') {
-            setTimeout(function() {desc1s.className = 'showBlock';}, 2000)
-            setTimeout(function() {desc2s.className = 'showBlock';}, 2500)
+            setTimeout(function () {
+                desc1s.className = 'showBlock';
+            }, 2000)
+            setTimeout(function () {
+                desc2s.className = 'showBlock';
+            }, 2500)
         } else if (selection.value == 'agent') {
-            setTimeout(function() {desc1a.className = 'showBlock';}, 2000)
-            setTimeout(function() {desc2a.className = 'showBlock';}, 2500)
+            setTimeout(function () {
+                desc1a.className = 'showBlock';
+            }, 2000)
+            setTimeout(function () {
+                desc2a.className = 'showBlock';
+            }, 2500)
         }
     }
 
@@ -205,11 +217,17 @@
         radarStory.style.top = '500px'
         radar.className = 'hidden'
         if (selection.value == 'officer') {
-            setTimeout(function() {officer.className = 'showBlock';}, 1500)
+            setTimeout(function () {
+                officer.className = 'showBlock';
+            }, 1500)
         } else if (selection.value == 'sheriff') {
-            setTimeout(function() {sheriff.className = 'showBlock';}, 1500)
+            setTimeout(function () {
+                sheriff.className = 'showBlock';
+            }, 1500)
         } else if (selection.value == 'agent') {
-            setTimeout(function() {agent.className = 'showBlock';}, 1500)
+            setTimeout(function () {
+                agent.className = 'showBlock';
+            }, 1500)
         }
     }
 
@@ -220,17 +238,21 @@
         welcomeEye.style.top = '350px'
         welcomeEye.style.padding = '15px'
         welcome.className = 'hidden'
-        setTimeout(function() {eye.className = 'showBlock';}, 1500)
+        setTimeout(function () {
+            eye.className = 'showBlock';
+        }, 1500)
     }
 
     function playAgain() {
- 
+
         outputList.className = 'hidden';
         inputs[0].className = 'showFlex';
 
         worldPic.style.height = '325px';
         pic.className = 'hidden'
-        setTimeout(function() {world.className = 'showBlock';}, 1000)
+        setTimeout(function () {
+            world.className = 'showBlock';
+        }, 1000)
 
         desc1o.className = 'hidden';
         desc2o.className = 'hidden';
@@ -244,27 +266,31 @@
         officer.className = 'hidden';
         sheriff.className = 'hidden';
         agent.className = 'hidden';
-        setTimeout(function() {radar.className = 'showFlex';}, 1500)
+        setTimeout(function () {
+            radar.className = 'showFlex';
+        }, 1500)
 
         welcomeEye.style.width = '370px'
         welcomeEye.style.height = '280px'
         welcomeEye.style.top = '375px'
         welcomeEye.style.padding = '74px'
         eye.className = 'hidden'
-        setTimeout(function() {welcome.className = 'showBlock';}, 1500)
+        setTimeout(function () {
+            welcome.className = 'showBlock';
+        }, 1500)
 
     }
 
     let i = 0;
     const text = 'Welcome to the Madlibs Database. Please enter the requested information in order to gain access...'
-    var speed = 80; 
+    var speed = 80;
 
     function typeWriter() {
-    if (i < text.length) {
-    document.querySelector("#welcome").innerHTML += text[i];
-    i++;
-    setTimeout(typeWriter, speed);
-    }
+        if (i < text.length) {
+            document.querySelector("#welcome").innerHTML += text[i];
+            i++;
+            setTimeout(typeWriter, speed);
+        }
     }
 
     typeWriter();

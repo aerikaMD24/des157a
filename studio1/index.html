@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Glory:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Glory:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
     <h1>Crack the Madlib</h1>
@@ -41,15 +45,15 @@
 
                 <label for="org">Pick an Organization:</label>
                 <select name="org" id="org">
-                <option value="officer">Police Department</option>
-                <option value="sheriff">Sheriff's Office</option>
-                <option value="agent">The FBI</option>
+                    <option value="officer">Police Department</option>
+                    <option value="sheriff">Sheriff's Office</option>
+                    <option value="agent">The FBI</option>
                 </select>
 
                 <div class="buttons">
                     <button>Next>></button>
                 </div>
-                
+
             </fieldset>
 
             <fieldset id="speechParts" class="hidden">
@@ -75,10 +79,10 @@
                 <input type="text" name="plNoun" id="plNoun">
 
                 <div class="buttons">
-                    <button>&lt&ltPrev</button>
+                    <button>&lt;&lt;Prev</button>
                     <button>Next>></button>
                 </div>
-                
+
             </fieldset>
 
             <fieldset id="general" class="hidden">
@@ -103,13 +107,13 @@
                 <label for="vehicle">Vehicle</label>
                 <input type="text" id="vehicle">
                 <div class="buttons">
-                    <button>&lt&ltPrev</button>
-                    <button>Access Madlib Database</button> 
+                    <button>&lt;&lt;Prev</button>
+                    <button>Access Madlib Database</button>
                 </div>
             </fieldset>
 
             <div id="outputsList" class="hidden">
-                <h2>>>>> Processing data for MadLib &lt&lt&lt&lt</h2>
+                <h2>>>>> Processing data for MadLib &lt;&lt;&lt;&lt;</h2>
                 <div id="twoCol">
                     <p>
                         >> FIRST NAME: <br>
@@ -126,7 +130,7 @@
                         >> CRIME: <br>
                         >> FOOD ITEM 1: <br>
                         >> FOOD ITEM2: <br>
-                        >> VEHICLE: 
+                        >> VEHICLE:
                     </p>
                     <p>
                         <span class="word0"></span><br>
@@ -157,10 +161,12 @@
         <p id="desc1o" class="hidden">Talents include <span class="word6"></span> and <span class="word7"></span></p>
         <p id="desc2o" class="hidden">Tall dark and <span class="word4"></span></p>
 
-        <p id="desc1s" class="hidden">Known for <span class="word6"></span> and <span class="word7"></span> vandalizing</p>
+        <p id="desc1s" class="hidden">Known for <span class="word6"></span> and <span class="word7"></span> vandalizing
+        </p>
         <p id="desc2s" class="hidden">Known hideouts in <span class="word3"></span></p>
 
-        <p id="desc1a" class="hidden">Likes to hide poison in <span class="word8"></span> and <span class="word12"></span></p>
+        <p id="desc1a" class="hidden">Likes to hide poison in <span class="word8"></span> and <span
+                class="word12"></span></p>
         <p id="desc2a" class="hidden">Luckily has not heard of <span class="word7"></span></p>
 
         <div id="worldPic">
@@ -182,15 +188,26 @@
         </div>
 
         <div id="radarStory">
-            <p id = "officerStory" class = "hidden">
-                Last seen in <span class="word3"></span>, the suspect, with multiple counts of <span class="word10"></span>, identity fraud and <span class="word11"></span> laundering is likely to be behind the case of the <span class="word2"></span> missing <span class="word8"></span>. Authorities tried to arrest them but failed when they threw a <span class="word12"></span> in the face of Officer <span class="word1"></span> and then proceeded to escape via <span class="word13"></span>. 
+            <p id="officerStory" class="hidden">
+                Last seen in <span class="word3"></span>, the suspect, with multiple counts of <span
+                    class="word10"></span>, identity fraud and <span class="word11"></span> laundering is likely to be
+                behind the case of the <span class="word2"></span> missing <span class="word8"></span>. Authorities
+                tried to arrest them but failed when they threw a <span class="word12"></span> in the face of Officer
+                <span class="word1"></span> and then proceeded to escape via <span class="word13"></span>.
             </p>
-            <p id = "sheriffStory" class = "hidden">
-                The <span class="word4"></span>-eyed bandit is at it again after <span class="word2"></span> years! They were found raiding a local <span class="word8"></span> and <span class="word11"></span> shop. Not only that but they stole the lunch of Sheriff <span class="word1"></span> before yelling 'Yee-Haw!' and skedaddling. There goes the <span class="word12"></span>. Then again, maybe that's what the Sheriff gets for <span class="word7"></span> and <span class="word6"></span> on the job.  
+            <p id="sheriffStory" class="hidden">
+                The <span class="word4"></span>-eyed bandit is at it again after <span class="word2"></span> years! They
+                were found raiding a local <span class="word8"></span> and <span class="word11"></span> shop. Not only
+                that but they stole the lunch of Sheriff <span class="word1"></span> before yelling 'Yee-Haw!' and
+                skedaddling. There goes the <span class="word12"></span>. Then again, maybe that's what the Sheriff gets
+                for <span class="word7"></span> and <span class="word6"></span> on the job.
             </p>
-            <p id = "agentStory" class = "hidden">
-                Proceed with caution and be wary of any <span class="word11"></span> packages you recieve with no gift tag: Subject <span class="word2"></span> has escaped.
-                They've already smashed the <span class="word13"></span> of Agent <span class="word1"></span>, drove while <span class="word6"></span> and committed <span class="word10"></span>. Be on the look out for them, <span class="word4"></span> sources claim they're headed to <span class="word3"></span>. 
+            <p id="agentStory" class="hidden">
+                Proceed with caution and be wary of any <span class="word11"></span> packages you recieve with no gift
+                tag: Subject <span class="word2"></span> has escaped.
+                They've already smashed the <span class="word13"></span> of Agent <span class="word1"></span>, drove
+                while <span class="word6"></span> and committed <span class="word10"></span>. Be on the look out for
+                them, <span class="word4"></span> sources claim they're headed to <span class="word3"></span>.
             </p>
             <div id="radar" class="showFlex">
                 <img id="radar1" src="images/radar1.png" alt="white basic radar system base">
@@ -205,4 +222,5 @@
     </main>
 
 </body>
+
 </html>
