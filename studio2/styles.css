@@ -1,0 +1,207 @@
+button {
+    position: fixed;
+    top: 150px;
+    right: 150px;
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+#scrapbook {
+    position: absolute;
+    /* bottom: 0;
+    right: 0; */
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+body {
+    max-width: 1200px;
+    min-width: 900px;
+    margin: auto;
+ 
+ }
+
+#houseBack {
+    /* adjust size later */
+    width: 56%;
+    height: 750px;
+
+    margin: auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+    background-image: url(images/testHouse.jpg);
+    background-repeat: no-repeat;
+
+    background-size: contain;
+    background-position: center;
+
+    /* for my own reference */
+    border: 3px black dashed;
+    /* transition: all 3s ease; */
+}
+
+#zoomIns {
+    height: inherit;
+    position: relative;
+    /* for my own reference */
+    border: 3px green dashed;
+}
+
+#roof {
+    background-color: rgba(100, 0, 0, 0.5);
+    filter: blur();
+    position: absolute;
+
+    top: 20%;
+    left: 50%;
+
+    /* change later */
+    width: 100px;
+    height: 100px;
+
+    /* for my own reference */
+    border: 3px red dashed;
+
+    /* width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid black; */
+
+}
+
+#middle {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    /* change later */
+    width: 100px;
+    height: 100px;
+
+    /* for my own reference */
+    border: 3px blue dashed;
+
+}
+
+#bottom {
+    position: absolute;
+
+    top: 80%;
+    left: 50%;
+
+    /* change later */
+    width: 100px;
+    height: 100px;
+
+    /* for my own reference */
+    border: 3px purple dashed;
+
+}
+
+img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    width: 300px;
+    filter: grayscale();
+}
+
+img:hover {
+    filter: none;
+}
+
+
+
+/* #container div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+#container img {
+    display: block;
+    position: absolute;
+    transition: all 3s ease;
+}
+
+#topleft {
+    top: 0;
+    left: 0;
+}
+
+#topright {
+    top: 0;
+    right: 0;
+}
+
+#bottomleft {
+    bottom: 0;
+    left: 0;
+}
+
+#bottomright {
+    bottom: 0;
+    right: 0;
+}
+
+#center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start {
+    width: 800px;
+    left: 0;
+    top: 0;
+}
+
+.topleft,
+.topright,
+.bottomleft,
+.bottomright,
+.center {
+    width: 3768px;
+}
+
+.topleft {
+    top: 0;
+    left: 0;
+}
+
+.topright {
+    top: 0;
+    left: -2968px;
+}
+
+.bottomleft {
+    left: 0;
+    top: -2020px;
+}
+
+.bottomright {
+    top: -2020px;
+    left: -2968px;
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
