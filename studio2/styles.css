@@ -1,207 +1,249 @@
-button {
-    position: fixed;
-    top: 150px;
-    right: 150px;
-}
-
-.hidden {
-    display: none;
-}
-
-.showing {
-    display: block;
-}
-
-#scrapbook {
-    position: absolute;
-    /* bottom: 0;
-    right: 0; */
-    background-color: pink;
-    width: 100px;
-    height: 100px;
-    z-index: 1;
-}
-
 body {
     max-width: 1200px;
     min-width: 900px;
     margin: auto;
- 
+    background-color: #f3abc3;
  }
 
-#houseBack {
-    /* adjust size later */
-    width: 56%;
-    height: 750px;
-
-    margin: auto;
-
+#mainHouse {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 45%; 
+    z-index: -1;
+    transition: all 1.5s ease;
+ } 
 
-    
-    background-image: url(images/testHouse.jpg);
-    background-repeat: no-repeat;
-
-    background-size: contain;
-    background-position: center;
-
-    /* for my own reference */
-    border: 3px black dashed;
-    /* transition: all 3s ease; */
-}
-
-#zoomIns {
-    height: inherit;
-    position: relative;
-    /* for my own reference */
-    border: 3px green dashed;
-}
-
-#roof {
-    background-color: rgba(100, 0, 0, 0.5);
-    filter: blur();
+#top {
     position: absolute;
+    top: 2%;
+    left: 35%;
 
-    top: 20%;
-    left: 50%;
+    width: 30%;
+    height: 42%;
 
-    /* change later */
-    width: 100px;
-    height: 100px;
+}
 
-    /* for my own reference */
-    border: 3px red dashed;
-
-    /* width: 0; 
+#top:hover {
+    /* traingle shape */
+    width: 0; 
     height: 0; 
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 50px solid black; */
+    border-left: 210px solid transparent;
+    border-right: 210px solid transparent;
+    border-bottom: 340px solid rgba(100, 0, 0, 0.5);
 
 }
 
-#middle {
+#midLeft {
     position: absolute;
+    top: 46%;
+    left: 34%;
 
-    top: 50%;
+    width: 16%;
+    height: 25%;
+}
+
+#midRight {
+    position: absolute;
+    top: 46%;
+    left: 51%;
+
+    width: 14%;
+    height: 25%;
+}
+
+#bottomLeft {
+    position: absolute;
+    top: 73%;
+    left: 33%;
+
+    width: 16%;
+    height: 24%;
+}
+
+#bottomRight {
+    position: absolute;
+    top: 72%;
     left: 50%;
 
-    /* change later */
-    width: 100px;
-    height: 100px;
-
-    /* for my own reference */
-    border: 3px blue dashed;
-
+    width: 15%;
+    height: 25%;
 }
 
-#bottom {
-    position: absolute;
-
-    top: 80%;
-    left: 50%;
-
-    /* change later */
-    width: 100px;
-    height: 100px;
-
-    /* for my own reference */
-    border: 3px purple dashed;
-
+#midLeft:hover, #midRight:hover, #bottomLeft:hover, #bottomRight:hover {
+    /* change color later */
+    background-color: rgba(100, 0, 0, 0.5);
 }
 
-img {
+.cutout {
     display: none;
     position: absolute;
-    top: 0;
-    left: 2%;
-    width: 300px;
     filter: grayscale();
 }
 
-img:hover {
+.cutout:hover {
     filter: none;
 }
 
-
-
-/* #container div {
-    position: absolute;
-    width: 200px;
-    height: 200px;
+#hangers {
+    top: 20%;
+    right: 30%;
 }
 
-#container img {
-    display: block;
-    position: absolute;
-    transition: all 3s ease;
+#laundry {
+    top: 73%;
+    right: 65%;
 }
 
-#topleft {
-    top: 0;
-    left: 0;
-}
-
-#topright {
-    top: 0;
-    right: 0;
-}
-
-#bottomleft {
-    bottom: 0;
-    left: 0;
-}
-
-#bottomright {
-    bottom: 0;
-    right: 0;
-}
-
-#center {
-    left: 50%;
+#toy {
     top: 50%;
-    transform: translate(-50%, -50%);
+    right: 55%;
 }
 
-.start {
-    width: 800px;
-    left: 0;
-    top: 0;
+#curtains {
+    top: 10%;
+    right: 26%;
 }
 
-.topleft,
-.topright,
-.bottomleft,
-.bottomright,
-.center {
-    width: 3768px;
+#trash {
+    top: 70%;
+    right: 60%;
 }
 
-.topleft {
-    top: 0;
-    left: 0;
+#globe {
+    top: 30%;
+    right: 45%;
 }
 
-.topright {
-    top: 0;
-    left: -2968px;
+#ipad {
+    top: 55%;
+    right: 15%;
 }
 
-.bottomleft {
-    left: 0;
-    top: -2020px;
+#plant {
+    top: 60%;
+    right: 75%;
 }
 
-.bottomright {
-    top: -2020px;
-    left: -2968px;
+#tree {
+    top: 10%;
+    right: 40%;
 }
 
-.center {
+#lamp {
+    top: 20%;
+    right: 30%;
+}
+
+#oven {
+    top: 20%;
+    right: 42%;
+}
+
+#chair {
+    top: 55%;
+    right: 20%;
+}
+
+
+
+
+
+#exit {
+    display: none;
+    position: fixed;
+    top: 20%;
+    right: 15%;
+    z-index: 2;
+} 
+
+#scrapbookTwo {
+    display: none;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-} */
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    /* border: red dashed 5px; */
+    backdrop-filter: blur(5px);
+    /* change */
+    background-color: rgba(100, 0, 0, 0.3);
+}
+
+#scrapbookTwo #twoWallpaper2 {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    background-color: palevioletred;
+    width: 30%;
+    height: 35%;
+    z-index: -2;
+}
+
+#scrapbookTwo #twoWallpaper1 {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: antiquewhite;
+    width: 50%;
+    height: 65%;
+    z-index: -1;
+}
+
+#stripes {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#stripes div{
+    background-color: #f3abc3;
+    width: 10%;
+    height: inherit;
+}
+
+#scrapbookTwo #twoOne {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    
+}
+
+#scrapbookTwo #twoTwo {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    
+}
+
+#scrapbookTwo p {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    background-color: palevioletred;
+    width: 20%;
+    padding: 40px;
+    color: white;
+}
+
+#scrapbookTwo h2 {
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    color: white;
+    padding: 40px;
+    transform: rotate(-15deg);
+}
+
+#scrapbookTwo button {
+    position: absolute;
+    top: 10%;
+    left: 78%;
+    padding: 15px;
+}
+
+
+
