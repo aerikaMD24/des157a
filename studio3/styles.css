@@ -1,0 +1,120 @@
+body {
+    font-family: Arial;
+    color: black;
+    line-height: 1.5em;
+    background-color: #BEDDDE;
+}
+.showing {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/* #rules {
+    display: none;
+} */
+
+
+h1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;;
+    transform: translate(-50%)
+}
+
+#quit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #D95B5B;
+}
+
+#tree {
+    position: absolute;
+    top: 20%;
+    left: 50%;;
+    transform: translate(-50%);
+}
+
+#players {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+#score {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aliceblue; */
+}
+
+#basket1, #basket2 {
+    width: 300px;
+    height: 200px;
+    background-image: url('images/basket.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: auto;
+}
+
+#score p {
+    text-align: center;
+    font-size: 72pt;
+}
+
+#actions {
+    position: absolute;
+    top: 30%;
+    left: 50%;;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+button { 
+    margin: 25px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 100px;
+}
+
+
+#gamecontrol {
+    /* display: none; */
+}
+
+
+
+#game {
+    border: green 2px dashed;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: none; */
+    /* background-color:#eaeaea; */
+    z-index:1
+}
+
+#snake {
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+footer {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    background-color: #8DC18F;
+}
+
+footer h2 {
+    padding: 50px;
+}

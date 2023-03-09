@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Game On</h1>
+    <section id="rules" class="hidden"> 
+        <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+        <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
+    </section>
+
+
+    <div id="gamecontrol">
+        <h2>Start Game</h2>
+        <button id="startgame">Randomly Pick the First Player, and Start the Game</button>
+    </div>
+
+    <button id="quit" class="showing">Wanna Quit?</button>
+
+    <div id="game"></div>
+    <div id="actions" class="hidden">
+        <button id="roll" class="showing">Shake Tree</button>
+        <button id="again" class="hidden">Shake Again</button>
+        <button id="pass" class="showing">Pass</button>
+        <button id="playAgain" class="hidden">Play Again?</button>
+    </div>
+    <div id="score">
+        <div id="basket1"><p id="score1"></p></div>
+        <div id="basket2"><p id="score2"></p></div>
+    </div>
+
+    <img id='tree' src="images/tree.png" alt="Apple Tree">
+    <div id="players">
+        <img id="mouse" src="images/mouse.png" alt="Player 1: Big Cheese (Mouse)">
+        <img id="bunny" src="images/bunny.png" alt="Player 2: Lil Tooth (Bunny)">
+    </div>
+    <div id="snake" class="hidden">
+        <img src="images/snake.png" alt="hissing snake">
+        <p><em><strong>No more apples for you!</strong></em></p>
+    </div>
+
+    <footer>
+        <h2 id="mouseText">Big Cheese's Turn</h2>
+        <h2 id="bunnyText">Lil Tooth's Turn</h2>
+    </footer>
+    
+</body>
+</html>

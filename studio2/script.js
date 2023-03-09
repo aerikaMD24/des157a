@@ -2,13 +2,27 @@
     'use strict';
     console.log('reading js');
 
+    // Variables for the House Zoom-ins and Cut-Outs
     const house = document.querySelector('#mainHouse');
     const zoomIns = document.querySelectorAll('section');const cutouts = document.querySelectorAll('.cutout');
-    const scrap2 = document.querySelector('#scrapbookTwo');
+    
 
     // Exit and Go Back buttons
     const exit = document.querySelectorAll('button')[0];
     const goBack = document.querySelectorAll('button')[1];
+
+    // Variables for the Scrapbook Section
+    const scrap2 = document.querySelector('#scrapbookTwo');
+    const scrap3 = document.querySelector('#scrapbookThree');
+    const scrap2P = document.querySelector('#scrapbookTwo p');
+    const scrap3P = document.querySelector('#scrapbookThree p');
+    // Images
+    const img2one = document.querySelector('#twoOne');
+    let img2two = document.querySelector('#twoTwo');
+    let img3one = document.querySelector('#threeOne');
+    let img3two = document.querySelector('#threeTwo');
+    let img3three = document.querySelector('#threeThree');
+    const imgs = ['images/curtainIn.jpeg', 'images/curtainOut.jpeg']
 
     
     // Function that zooms in on the 5 different sections of the main house picture and then exits accordingly
@@ -18,6 +32,7 @@
             house.style.width = '45%';
             house.style.top = '50%';
             house.style.left = '50%';
+            exit.style.display = 'none';
             for (let i = 0; i < cutouts.length; i++) {
                 cutouts[i].style.display = 'none';
             }
@@ -83,15 +98,7 @@
     cutouts.forEach(function (eachCut) {
         eachCut.addEventListener('click', clickCutout);
         goBack.addEventListener('click', function() {
-            // house.style.width = '45%';
-            // house.style.top = '50%';
-            // house.style.left = '50%';
-            // cutouts.forEach(function (eachCut) {
-            //     eachCut.style.display = 'none';
-            // })
-            // for (let i = 0; i < zoomIns.length; i++) {
-            //     zoomIns[i].style.display = 'block';
-            // }
+            scrap2.style.display = 'none';
         })
     });
 
@@ -106,10 +113,15 @@
               // code block
               break;
             case 'toy':
-                // code block
+                scrap2.style.display = 'block';
+                img2one.src = imgs[1];
+                img2two.src = imgs[1];
+                scrap2P.innerHTML = 'text';
             break;
             case 'curtains':
                 scrap2.style.display = 'block';
+                img2one.src = imgs[0];
+                img2two.src = imgs[0];
               break;
             case 'trash':
               // code block
@@ -135,7 +147,6 @@
             case 'chair':
                 // code block
             break;
- 
           }
 
     }
