@@ -82,13 +82,15 @@ button {
 
 
 #gamecontrol {
-    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 
 
 #game {
-    border: green 2px dashed;
+    /* border: green 2px dashed; */
     position: absolute;
     top: 80%;
     left: 50%;

@@ -22,7 +22,7 @@
     let img3one = document.querySelector('#threeOne');
     let img3two = document.querySelector('#threeTwo');
     let img3three = document.querySelector('#threeThree');
-    const imgs = ['images/curtainIn.jpeg', 'images/curtainOut.jpeg']
+    const imgs = ['images/curtainIn.jpeg', 'images/curtainOut.jpeg', 'images/crux.jpeg', 'images/weights.jpeg', 'images/kitchenTools.jpeg', 'images/kitchenAll.jpeg']
 
     
     // Function that zooms in on the 5 different sections of the main house picture and then exits accordingly
@@ -121,13 +121,15 @@
             case 'curtains':
                 scrap2.style.display = 'block';
                 img2one.src = imgs[0];
-                img2two.src = imgs[0];
+                img2two.src = imgs[1];
               break;
             case 'trash':
               // code block
               break;
             case 'globe':
-                // code block
+                scrap2.style.display = 'block';
+                img2one.src = imgs[2];
+                img2two.src = imgs[3];
             break;
             case 'ipad':
               // code block
@@ -142,7 +144,10 @@
               // code block
               break;
             case 'oven':
-              // code block
+                scrap2.style.display = 'block';
+                img2one.src = imgs[4];
+                img2two.src = imgs[5];
+                scrap2P.innerHTML = "I once told my mom's frieends that these were all for show and she wass not happy (we don't drink coffee)";
               break;
             case 'chair':
                 // code block
