@@ -12,10 +12,23 @@ body {
     display: none;
 }
 
-/* #rules {
-    display: none;
-} */
+#rules {
+    position: absolute;
+    top: 50%;
+    left: 50%;;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 75px;
+    background-color: #D6BB9C;
+    border: 10px #BB9E7B solid;
+    border-radius: 50px;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+}
 
+#startgame {
+    width: 300px;
+}
 
 h1 {
     position: absolute;
@@ -29,6 +42,7 @@ h1 {
     top: 0;
     right: 0;
     background-color: #D95B5B;
+    border-color: #E29292;
 }
 
 #tree {
@@ -47,7 +61,6 @@ h1 {
 #score {
     display: flex;
     justify-content: space-between;
-    /* background-color: aliceblue; */
 }
 
 #basket1, #basket2 {
@@ -78,6 +91,8 @@ button {
     padding: 10px;
     width: 150px;
     border-radius: 100px;
+    border-color: #BB9E7B;
+    background-color: white;
 }
 
 
@@ -87,16 +102,11 @@ button {
     left: 0;
 }
 
-
-
 #game {
-    /* border: green 2px dashed; */
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* display: none; */
-    /* background-color:#eaeaea; */
     z-index:1
 }
 
@@ -111,12 +121,19 @@ button {
 
 footer {
     height: 200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: top;
+    position: relative;
     background-color: #8DC18F;
 }
 
 footer h2 {
-    padding: 50px;
+    position: absolute;
+    padding: 25px;
+}
+
+#mouseText {
+    left: 3%;
+}
+
+#bunnyText {
+    right: 3%;
 }

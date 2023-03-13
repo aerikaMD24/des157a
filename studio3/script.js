@@ -2,11 +2,29 @@
     'use strict';
     console.log('reading js')
 
+    // Buttons
     const startGame = document.querySelector('#startgame');
-    const gameControl = document.querySelector('#gamecontrol');
+    const quit = document.querySelector('#quit');
+    const roll = document.querySelector('#roll');
+    const pass = document.querySelector('#pass');
+    const playAgain = document.querySelector('#playAgain');
+
+    // Game Elements
     const game = document.querySelector('#game');
-    const score = document.querySelector('#score');
     const actionArea = document.querySelector('#actions');
+    const mouseText = document.querySelector('#mouseText');
+    const bunnyText = document.querySelector('#bunnyText');
+    const rules = document.querySelector('#rules');
+    const snake = document.querySelector('#snake');
+    const score1 = document.querySelector('#score1');
+    const score2 = document.querySelector('#score2');
+
+    // Audio Elements
+    const hissSnake = new Audio('audio/hissSnake.m4a');
+    const shakeTree = new Audio('audio/shakeTree.m4a');
+    const awMan = new Audio('audio/awMan.m4a');
+    const yay = new Audio('audio/yay.m4a');
+
 
         let gameData = {
             dice: ['images/leaf.png', 'images/apple.png','images/twoApples.png', 'images/threeApples.png'],
@@ -16,32 +34,59 @@
             roll2: 0,
             rollSum: 0,
             index: 0,
-            gameEnd: 29
+            gameEnd: 22
         }
 
         startGame.addEventListener('click', function(){
+            rules.className = 'hidden';
             // ramdomly set game index
             gameData.index = Math.round(Math.random());  
 
-            document.querySelector('#quit').addEventListener('click', function(){
+            // Shows which player is playing
+            if (gameData.index === 0) {
+                mouseText.className = 'showing';
+            } else {
+                bunnyText.className = 'showing';
+            }
+
+            quit.addEventListener('click', function(){
                 location.reload();
             });
 
-            // Show Action Options
+            // Shows Action Options
             actionArea.className = 'showing';
-            
+        
             setUpTurn();
         })
 
+        function showPlayers() {
+            if (gameData.index === 0) {
+                bunnyText.className = 'hidden';
+                mouseText.className = 'showing';
+            } else {
+                mouseText.className = 'hidden';
+                bunnyText.className = 'showing';
+            }
+        }
+
         function setUpTurn() {
 
-            document.querySelector('#roll').addEventListener('click', function(){
+            // NOTE this got commented out
+            // document.querySelector('#again').className = 'hidden';
+            roll.className = 'showing';
+            snake.className = 'hidden';
+            pass.className = 'showing';
+
+            roll.addEventListener('click', function(){
+                shakeTree.play();
                 throwDice();
             })
-            document.querySelector('#again').className = 'hidden';
-            document.querySelector('#roll').className = 'showing';
-            document.querySelector('#snake').className = 'hidden';
-            document.querySelector('#pass').className = 'showing';
+
+            // NOTE this got added
+            pass.addEventListener('click', function(){
+                gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+            showPlayers();
+            })
         }
 
         function throwDice(){
@@ -49,79 +94,75 @@
 
             gameData.roll1 = Math.floor(Math.random() * 4);
             gameData.roll2 = Math.floor(Math.random() * 4);
-            console.log(`gamedata1 ${gameData.roll1}`);console.log(`gamedata2 ${gameData.roll2}`);
-            gameData.rollSum = gameData.roll1 + gameData.roll2;
-            gameData.score[gameData.index] += gameData.rollSum;
-            console.log(gameData.rollSum)
-            showCurrentScore();
 
-            // put dice images on screen (needs to be 1 less than value caue of array index)
+            // put dice images on screen
             game.innerHTML = `<img src="${gameData.dice[gameData.roll1]}"> 
-                                <img src="${gameData.dice[gameData.roll2]}">`;
+            <img src="${gameData.dice[gameData.roll2]}">`;
 
-            
+            gameData.rollSum = gameData.roll1 + gameData.roll2;          
 
             // if two of the same number is rolled but is not 0 and 0 (eg 11, 22, 33) 
             if (gameData.rollSum === 0) {
-                gameData.score[gameData.index] += gameData.rollSum;
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-                game.innerHTML += `<p>Sorry, no apples, switch to a new tree and the other player</p>`
+                game.innerHTML += `<p><em>Sorry, no apples here, switch!<em></p>`;
+                awMan.play();
+                showPlayers();
                 showCurrentScore();
-                setTimeout(setUpTurn, 2000)
+
             // if 0 and 0 were both rolled
             } else if (gameData.roll1 === gameData.roll2 && gameData.rollSum !== 0) {
-                document.querySelector('#snake').className = 'showing';
+                snake.className = 'showing';
+                hissSnake.play();
                 gameData.score[gameData.index] = 0;
                 // ternary operator, that switches players (true/false)
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-                console.log(`player1 score: ${gameData.score[0]}`);
-                console.log(`player2 score: ${gameData.score[1]}`)
 
                 showCurrentScore();
-                setTimeout(setUpTurn, 3000)
+                
+                // Hide snake after delay
+                setTimeout(function(){
+                    snake.className = 'hidden';
+                    showPlayers();
+                }, 3000)
+
             // if neither doubles or zero's are rolled
             } else {
-            
-                document.querySelector('#again').className = 'showing';
-                document.querySelector('#roll').className = 'hidden';
-                document.querySelector('#pass').className = 'hidden';
 
-
-                document.querySelector('#again').addEventListener('click', function(){
-                    console.log('again')
-                    setUpTurn();
-                })
-
-                document.querySelector('#pass').addEventListener('click', function(){
-                    gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-                    setUpTurn();
-                })
+                gameData.score[gameData.index] += gameData.rollSum;
 
                 checkWinCondition();
+               
             }
 
             function checkWinCondition() {
                 // check winning condition
                 if (gameData.score[gameData.index] > gameData.gameEnd) {
-                    document.querySelector('#bunnyText').innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+                    yay.play();
+                    showPlayers();
+                    if (gameData.index === 0) {
+                        mouseText.innerHTML = 'Big Cheese Won!';
+                    } else {
+                        bunnyText.innerHTML = 'Lil Tooth Won!';
+                    }
+                    // document.querySelector('#bunnyText').innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
 
-                    document.querySelector('#roll').className = 'hidden';document.querySelector('#pass').className = 'hidden';
-                    document.querySelector('#playAgain').className = 'showing';
+                    roll.className = 'hidden';
+                    pass.className = 'hidden';
+                    playAgain.className = 'showing';
 
-                    document.querySelector('#playAgain').addEventListener('click', function(){
+                    playAgain.addEventListener('click', function(){
                         location.reload();
                     });
-                    
+                    showCurrentScore();
                 } 
-                // else {
-                //     showCurrentScore();
-                // }
+                else {
+                    showCurrentScore();
+                }
             }
 
             function showCurrentScore(){
-                document.querySelector('#score1').innerHTML = gameData.score[0];
-                document.querySelector('#score2').innerHTML = gameData.score[1];
-                // score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}:${gameData.score[0]}</strong> and <strong>${gameData.players[1]}:${gameData.score[1]}</strong></p>`;
+                score1.innerHTML = gameData.score[0];
+                score2.innerHTML = gameData.score[1];
             }
         }
 

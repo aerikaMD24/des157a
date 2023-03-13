@@ -10,16 +10,14 @@
 </head>
 <body>
     <h1>Game On</h1>
-    <section id="rules" class="hidden"> 
-        <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
-        <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
+    <section id="rules" class="showing"> 
+        <h2>Rules</h2>
+        <p>There are two players: Big Cheese and Lil Tooth. The player whose turn it is will shake the tree for apples. The number of apples will be recorded in the apple baskets. The first one to get 23 apples wins. But beware, if the tree is shaken too much, the snake might awaken and all the apples will be lost! And if the tree is shaken and there's no apples, there'll be a need to switch trees as well as player turns.</p> 
+        <p>Are you ready to play?</p>
+        <button id="startgame">Let's Get Them Apples!</button>
+        <p><em>Warning: This game has sounds. Don't play on full volume, I recommend putting it halfway at first and then adjusting accordingly</em></p>
+        
     </section>
-
-
-    <div id="gamecontrol">
-        <h2>Start Game</h2>
-        <button id="startgame">Randomly Pick the First Player, and Start the Game</button>
-    </div>
 
     <button id="quit" class="showing">Wanna Quit?</button>
 
@@ -46,8 +44,8 @@
     </div>
 
     <footer>
-        <h2 id="mouseText">Big Cheese's Turn</h2>
-        <h2 id="bunnyText">Lil Tooth's Turn</h2>
+        <h2 id="mouseText" class="hidden">Big Cheese's Turn</h2>
+        <h2 id="bunnyText" class="hidden">Lil Tooth's Turn</h2>
     </footer>
     
 </body>

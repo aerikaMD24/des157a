@@ -1,0 +1,145 @@
+body {
+    /* max-width: 1200px; */
+    min-width: 900px;
+    margin: auto;
+    background-color: #122253;
+    color: white;
+    font-family: 'Glory', sans-serif;
+    font-size: 1rem;
+    position: relative;
+ }
+
+ .showing {
+   display: block;
+ }
+
+ .hidden {
+   display: none;
+ }
+ 
+ h1 {
+   display: none;
+    position: absolute;
+    right: 12%;
+    font-size: 2.5rem;
+ }
+ 
+ h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 10px;
+ }
+ 
+ 
+
+ #footage {
+   width: 100%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: -1;
+   transition: all 1.5s ease;
+ }
+
+ #footage img {
+   width: 100%;
+ }
+
+ #rec {
+   width: 100px;
+   position: absolute;
+   top: 15px;
+   right: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: red;
+   transition: all 1.5s ease;
+ }
+
+ #rec p {
+   font-size: 24px;
+ }
+
+#rec div {
+   border-radius: 100%;
+   background-color: red;
+   width: 35px;
+   height: 35px;
+ }
+
+ #cam {
+   width: 100%;
+   height: 750px;
+ }
+
+
+ #camera {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   
+ }
+
+ .sideCamUI {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+ #camera img {
+   width: 150px;
+   padding: 15px;
+   transition: all 1.5s ease;
+   /* can  adjust width/height to show zoom*/
+ }
+
+
+ #suspects div {
+   position: absolute;
+   /* for reference only */
+   background-color: rgba(20, 50, 50, 0.5)
+ }
+
+ #suspect1 {
+   width: 200px;
+   height: 300px;
+   top: 11%;
+   left: 11%;
+ }
+ #suspect2 {
+   width: 260px;
+   height: 230px;
+   top: 14%;
+   left: 39%;
+ }
+ #suspect3 {
+   width: 200px;
+   height: 230px;
+   top: 19%;
+   left: 72%;
+ }
+ #suspect4 {
+   width: 360px;
+   height: 240px;
+   top: 55%;
+   left: 24%;
+ }
+ #suspect5 {
+   width: 300px;
+   height: 200px;
+   top: 60%;
+   left: 67%;
+ }
+
+
+
+ 
+ 
