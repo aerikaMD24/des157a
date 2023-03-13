@@ -3,11 +3,17 @@ body {
     min-width: 900px;
     margin: auto;
     background-color: #f3abc3;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 20px;
  }
 
 h1 {
     padding: 25px;
     color: white;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 #mainHouse {
@@ -160,7 +166,7 @@ h1 {
     border: none;
     background: none;
     color: white;
-    font-size: 36px;
+    font-size: 28px;
     text-decoration: underline;
 } 
 
