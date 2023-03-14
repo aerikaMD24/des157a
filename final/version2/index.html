@@ -21,26 +21,67 @@
     <h1>Final</h1>
 
     <main>
-
-       <div id="cctv">
-            <img src="images/testZoom.png">
-       </div>
-
-       <div id="zoom1"></div>
-
-       <!-- <div id="welcomeEye">
-        <div id="welcome" class="showBlock">
-        </div>
-        <div id="eye" class="hidden">
-            <p>Eye Color:</p>
-            <p id="eyeColor"><span class="word9"></span></p>
-            <img src="images/eye.png" alt="The Suspect's Eye'">
+        <div id="btns">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>X</button>
         </div>
 
-        <button>
-            Next
-        </button> -->
-    </div>
+        <div id="testing" class="showing">
+            <p>Hello! Thankyou for taking time out of your day to user test my project!</p>
+            <p>Your tasks for today are pretty simple:</p>
+            <ul>
+                <li>Navigate through the buttons on the top right (X brings you back to this page)</li>
+                <li>Try the 'game' at '1'. Red circles will appear on screen and your goal would be to get rid of all of them</li>
+                <li>Try the 'game' at '2'. Click on the rectangles to zoom in on areas on the larger image</li>
+                <p>Thanks again!</p>
+            </ul>
+        </div>
+
+        <div id="game1" class="hidden">
+            <p>Click on the viruses to get rid of them</p>
+            <!-- <div class="virus"></div> -->
+        </div>
+        
+
+        <div id="game2" class="hidden">
+            <div id="cam">
+                <div id="rec">
+                    <div></div>
+                    <p>REC</p>
+                </div>
+                <div id="camera">
+                    <div class="sideCamUI">
+                        <img src="images/ulCamUI.png" alt="Upper Left Camera UI">
+                        <img src="images/llCamUI.png" alt="Lower Left Camera UI">
+                    </div>
+                    <div class="sideCamUI">
+                        <img src="images/urCamUI.png" alt="Upper Right Camera UI">
+                        <img src="images/lrCamUI.png" alt="Lower Right Camera UI">
+                    </div>
+                    
+                </div>
+                <div id="suspects">
+                    <div id="suspect1"></div>
+                    <div id="suspect2"></div>
+                    <div id="suspect3"></div>
+                    <div id="suspect4"></div>
+                    <div id="suspect5"></div>
+                </div>
+            </div>
+    
+            <div id="footage">
+                <img src="images/testZoom.jpg" alt="cctv footage">
+            </div>
+        
+    
+           <div id="zoom1"></div>
+        </div>
+
+        <div id="game3" class="hidden"></div>
+
+        
 
     </main>
 

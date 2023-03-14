@@ -1,6 +1,6 @@
 body {
-    max-width: 1200px;
-    min-height: 900px;
+    /* max-width: 1200px; */
+    min-width: 900px;
     margin: auto;
     background-color: #122253;
     color: white;
@@ -8,339 +8,169 @@ body {
     font-size: 1rem;
     position: relative;
  }
- 
- h1 {
+
+ .showing {
+   display: block;
+ }
+
+ .hidden {
    display: none;
-    position: absolute;
-    right: 12%;
-    font-size: 2.5rem;
- }
- 
- h2 {
-    font-size: 1.4rem;
-    text-align: center;
-    margin-bottom: 10px;
- }
- 
- #cctv {
-    width: 90%;
-    height: 630px;
-    box-sizing: border-box;
-    /* padding: 35px 70px; */
-    margin: auto;
-    /* position: absolute;
-    top: 95px;
-    right: 1%; */
-    /* background: linear-gradient(180deg, rgba(139, 226, 232, 0.5) 0%, rgba(162, 220, 221, 0.275) 51.04%, rgba(139, 226, 232, 0.425) 100%); */
-    /* border: 8px dashed #7DB2BE; */
-    /* border-radius: 35px; */
  }
 
- #cctv img {
-   height: 630px;
- }
-
- #zoom1, #zoom2, #zoom3, #zoom4, #zoom5 {
-   width: 100px;
-   height: 100px;
-   background-color: #55BDD3;
- }
-
- #welcomeEye {
-   height: 280px;
-   width: 370px;
-   box-sizing: border-box;
+ h1 {
+  display: none;
    position: absolute;
-   right: 51%;
-   top: 375px;
-   padding: 74px;
+   right: 12%;
+   font-size: 2.5rem;
+}
+
+h2 {
+   font-size: 1.4rem;
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+ #btns {
+  position: fixed;
+  display: flex;
+  right: 1%;
+  z-index: 5;
+ }
+
+ #testing {
+  margin: auto;
+  width: 70%;
+  padding: 200px;
+ }
+
+ #game1 {
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  border:  1px red solid;
+ }
+ 
+.virus {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: palevioletred;
+  border-radius: 100%;
+}
+ 
+ 
+
+ #footage {
+   width: 100%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: -1;
+   transition: all 1.5s ease;
+ }
+
+ #footage img {
+   width: 100%;
+ }
+
+ #rec {
+   width: 100px;
+   position: absolute;
+   top: 15px;
+   right: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: red;
+   transition: all 1.5s ease;
+ }
+
+ #rec p {
+   font-size: 24px;
+ }
+
+#rec div {
+   border-radius: 100%;
+   background-color: red;
+   width: 35px;
+   height: 35px;
+ }
+
+ #cam {
+   width: 100%;
+   height: 750px;
+ }
+
+
+ #camera {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   
+ }
+
+ .sideCamUI {
    display: flex;
    flex-direction: column;
-   align-items: center;
-   background: rgba(125, 178, 190, 0.7);
-   border-radius: 35px;
-   font-family: 'Anonymous Pro', monospace;
-   z-index: 1;
-   transition: 1s all linear;
-}
+   justify-content: space-between;
+ }
 
-#welcomeEye p {
-   margin-bottom: 5px;
-   margin-top: 0;
-   text-align: center;
-}
- 
- .hidden {
-    display: none;
+ #camera img {
+   width: 150px;
+   padding: 15px;
+   transition: all 1.5s ease;
+   /* can  adjust width/height to show zoom*/
  }
- 
- .showFlex {
-    display: flex;
-    flex-direction: column;
+
+
+ #suspects div {
+   position: absolute;
+   /* for reference only */
+   background-color: rgba(20, 50, 50, 0.5)
  }
- 
- .showBlock {
-    display: block;
+
+ #suspect1 {
+   width: 200px;
+   height: 300px;
+   top: 11%;
+   left: 11%;
  }
- 
- .progress {
-    display: flex;
-    justify-content: center;
+ #suspect2 {
+   width: 260px;
+   height: 230px;
+   top: 14%;
+   left: 39%;
  }
- 
- .dot {
-    width: 10px;
-    height: 10px;
-    margin: 5px;
-    background-color: white;
-    border-radius: 100%;
+ #suspect3 {
+   width: 200px;
+   height: 230px;
+   top: 19%;
+   left: 72%;
  }
- 
- .current {
-    width: 10px;
-    height: 10px;
-    margin: 5px;
-    background-color: #55BDD3;
-    border-radius: 100%;
+ #suspect4 {
+   width: 360px;
+   height: 240px;
+   top: 55%;
+   left: 24%;
  }
- 
- fieldset {
-    border: none;
+ #suspect5 {
+   width: 300px;
+   height: 200px;
+   top: 60%;
+   left: 67%;
  }
+
+
+
  
- input,
- select {
-    height: 45px;
-    margin-bottom: 15px;
- }
  
- input:focus,
- select:focus {
-    background-color: azure;
-    outline-color: #55BDD3;
- }
- 
- fieldset label,
- select {
-    margin-bottom: 10px;
- }
- 
- .buttons {
-    display: flex;
-    justify-content: space-between;
- }
- 
- #twoCol {
-    display: flex;
-    justify-content: space-between;
- }
- 
- #twoCol p {
-    line-height: 1.4em;
- }
- 
- span {
-    text-decoration: underline;
-    font-weight: bold;
- }
- 
- #desc1o,
- #desc1s,
- #desc1a,
- #desc2o,
- #desc2s,
- #desc2a {
-    padding: 10px;
-    background-color: #6FA2B1;
-    position: absolute;
-    z-index: 1;
- }
- 
- #desc1o,
- #desc1s,
- #desc1a {
-    top: 100px;
-    left: 20%;
- }
- 
- #desc2o,
- #desc2s,
- #desc2a {
-    top: 330px;
-    left: 0;
- }
- 
- #worldPic {
-    width: 620px;
-    height: 325px;
-    box-sizing: border-box;
-    position: absolute;
-    left: 2%;
-    top: -40px;
-    padding: 50px;
-    background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
-    border: 10px dashed #749FA8;
-    border-radius: 37px;
-    font-family: 'Anonymous Pro', monospace;
-    transition: 1s height linear;
- }
- 
- #world {
-    background-image: url(images/worldMap.png);
-    background-size: cover;
-    height: 200px;
-    margin-top: 15px;
-    ;
-    animation: 2.5s swipe ease-out alternate infinite;
- }
- 
- @keyframes swipe {
-    0% {
-       width: 0
-    }
- 
-    100% {
-       width: 465px
-    }
- }
- 
- #welcomeEye {
-    height: 280px;
-    width: 370px;
-    box-sizing: border-box;
-    position: absolute;
-    right: 51%;
-    top: 375px;
-    padding: 74px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(125, 178, 190, 0.7);
-    border-radius: 35px;
-    font-family: 'Anonymous Pro', monospace;
-    z-index: 1;
-    transition: 1s all linear;
- }
- 
- #welcomeEye p {
-    margin-bottom: 5px;
-    margin-top: 0;
-    text-align: center;
- }
- 
- #welcome p {
-    text-align: left;
- }
- 
- #eyeImg {
-    background-image: url(images/testEye.png);
-    background-size: cover;
-    width: 150px;
-    margin-top: 7px;
-    animation: 2s swipe ease-in-out alternate infinite;
- }
- 
- #radarStory {
-    width: 250px;
-    box-sizing: border-box;
-    position: absolute;
-    left: 2%;
-    top: 300px;
-    padding: 15px;
-    background: rgba(125, 178, 190, 0.5);
-    border: 7px dashed #749FA8;
-    border-radius: 35px;
-    font-family: 'Anonymous Pro', monospace;
-    transition: 1s width linear;
-    transition: 1s top linear;
- }
- 
- #radar {
-    background-image: url(images/radarBase.png);
-    background-size: contain;
- }
- 
- #radar img {
-    width: 207px;
- }
- 
- #radar1 {
-    animation: 1.5s fade linear alternate-reverse infinite
- }
- 
- #radar2 {
-    animation: 1.5s fade linear alternate infinite
- }
- 
- @keyframes fade {
-    0% {
-       opacity: 0
-    }
- 
-    100% {
-       opacity: 1
-    }
- }
- 
- #bg1 {
-    width: 585px;
-    height: 700px;
-    position: absolute;
-    left: -3%;
-    background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
-    border-radius: 35px;
-    z-index: -1;
-    animation: 5s sway1 ease-in-out alternate infinite;
- }
- 
- @keyframes sway1 {
-    0% {
-       top: -20px
-    }
- 
-    100% {
-       top: 100px
-    }
- }
- 
- #bg2 {
-    width: 820px;
-    height: 450px;
-    position: absolute;
-    top: -25px;
-    background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
-    border-radius: 35px;
-    z-index: -1;
-    animation: 5s sway2 ease-in-out alternate infinite;
- }
- 
- @keyframes sway2 {
-    0% {
-       left: 30%
-    }
- 
-    100% {
-       left: 40%
-    }
- }
- 
- #bg3 {
-    width: 635px;
-    height: 295px;
-    top: 475px;
-    position: absolute;
-    background: linear-gradient(180deg, rgba(139, 226, 232, 0.2) 0%, rgba(162, 220, 221, 0.11) 51.04%, rgba(139, 226, 232, 0.17) 100%);
-    border-radius: 35px;
-    z-index: -1;
-    animation: 4s sway3 ease-in-out alternate infinite;
- }
- 
- @keyframes sway3 {
-    0% {
-       left: 54%
-    }
- 
-    100% {
-       left: 47%
-    }
- }
