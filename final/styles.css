@@ -32,3 +32,16 @@ body {
  #paras section {
     width: 38%;
  }
+
+ #pics {
+   /* padding: 20px; */
+   margin: 35px;
+   display: flex;
+   justify-content: space-between;
+   /* border: #7DB2BE 3px solid; */
+ }
+
+ img {
+   border: 8px dashed #7DB2BE;
+   border-radius: 35px;
+ }
