@@ -21,27 +21,25 @@
     <h1>Final</h1>
 
     <main>
-        <div id="btns">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>X</button>
-        </div>
-
-        <div id="testing" class="showing">
-            <p>Hello! Thankyou for taking time out of your day to user test my project!</p>
-            <p>Your tasks for today are pretty simple:</p>
-            <ul>
-                <li>Navigate through the buttons on the top right (X brings you back to this page)</li>
-                <li>Try the 'game' at '1'. Red circles will appear on screen and your goal would be to get rid of all of them</li>
-                <li>Try the 'game' at '2'. Click on the rectangles to zoom in on areas on the larger image</li>
-                <p>Thanks again!</p>
-            </ul>
+        <!-- purely for testing, get rid -->
+        <div id="controlCenter" class="hidden">
+            <button id=""></button>
+            <button id=""></button>
+            <button id=""></button>
+            <button id=""></button>
+            <button id=""></button>
+            <button id=""></button>
         </div>
 
         <div id="game1" class="hidden">
             <p>Click on the viruses to get rid of them</p>
-            <!-- <div class="virus"></div> -->
+            <!-- <div class='virus'>
+                <div class='vContainer'>
+                  <div class=vlEye></div>
+                  <div class=vrEye></div>
+                  <div class=vMouth></div>
+                </div>
+              </div> -->
         </div>
         
 
@@ -79,7 +77,15 @@
            <div id="zoom1"></div>
         </div>
 
-        <div id="game3" class="hidden"></div>
+        <div id="game3" class="showing">
+            <div id="barContainer">
+                <div id="healthBar"></div>
+            </div>
+            
+            <div id="enemyType"></div>
+            <div id="userType"></div>
+
+        </div>
 
         
 
