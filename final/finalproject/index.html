@@ -21,30 +21,68 @@
     <h1>Final</h1>
 
     <main>
-        <!-- purely for testing, get rid -->
-        <div id="controlCenter" class="hidden">
-            <button id=""></button>
-            <button id=""></button>
-            <button id=""></button>
-            <button id=""></button>
-            <button id=""></button>
-            <button id=""></button>
+        <div id="controlCenter" class="showing">
+            <div id="control">
+                <button id="email"><p>Mail</p></button>
+                <button id="news"><p>News</p></button>
+                <button id="database"><p>Access Database</p></button>
+                <button id="cctv"><p>CCTV Cameras</p></button>
+                <button id="quit"><p>Restart Game</p></button>
+                <button id="report"><p>File A Report</p></button>
+            </div>
+        </div>
+
+        <div id="alertBox" class="hidden">
+            <div id="alert">
+                <h2>Warning:</h2>
+                <p>It appears you're being hacked, click on the virus to get rid of them</p>
+                <button id="alertBtn">Got it!</button>
+            </div>
+            
         </div>
 
         <div id="game1" class="hidden">
-            <p>Click on the viruses to get rid of them</p>
-            <!-- <div class='virus'>
-                <div class='vContainer'>
-                  <div class=vlEye></div>
-                  <div class=vrEye></div>
-                  <div class=vMouth></div>
+            <div id="game1BG">
+                <div id="messageLog">
+                    <h2>>>>> Accessing data for MadLib &lt;&lt;&lt;&lt;</h2>
+                    <p>Log in to access database</p>
                 </div>
-              </div> -->
+                <form>
+                    <div class="progress">
+                        <div class="current"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+    
+                    <label for="fName">First Name</label>
+                    <input type="text" id="fName">
+    
+                    <label for="lName">Last Name</label>
+                    <input type="text" id="lName">
+    
+                    <label for="num">ID Number</label>
+                    <input type="text" id="num">
+    
+                    <label for="org">Agency Branch:</label>
+                    <select name="org" id="org">
+                        <option>Madlibs Database Branch</option>
+                        <option>Mermaid Portal Branch</option>
+                        <option>Every Picture is Pink Branch</option>
+                        <option>Game On Apple Tree Branch</option>
+                    </select>
+                    <div id="fakeButton">
+                        <button>Next>></button>
+                    </div>
+                    <p id="errorMessage"></p>
+                </form>
+            </div>
         </div>
         
 
         <div id="game2" class="hidden">
+            <div id="susMessage" class="hidden"></div>
             <div id="cam">
+                <button id="zoomOut" class="hidden">Zoom Out</button>
                 <div id="rec">
                     <div></div>
                     <p>REC</p>
@@ -67,23 +105,26 @@
                     <div id="suspect4"></div>
                     <div id="suspect5"></div>
                 </div>
+                
             </div>
     
             <div id="footage">
-                <img src="images/testZoom.jpg" alt="cctv footage">
+                <img src="images/zoom.jpeg" alt="cctv footage">
             </div>
         
     
            <div id="zoom1"></div>
         </div>
 
-        <div id="game3" class="showing">
+        <div id="game3" class="hidden">
             <div id="barContainer">
                 <div id="healthBar"></div>
             </div>
+
+            <div id="timer"></div>
             
             <div id="enemyType"></div>
-            <div id="userType"></div>
+            
 
         </div>
 
